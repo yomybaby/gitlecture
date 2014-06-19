@@ -1,0 +1,468 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Git 제대로 써보기
+
+    // build:css styles/styles.css
+    //- Check out 'src/bower_components/prism/themes/' for available themes
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
+    link(rel='stylesheet', type='text/css', href='styles/main.css')
+    link(rel='stylesheet', type='text/css', href='styles/ti.css')
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+    // endbuild
+
+  body
+    - var smallTitle ='';
+    article#main-article
+      section(data-bespoke-state='reveal')
+        h1
+          i.fa.fa-git
+          |  제대로 써보기
+        h3
+          i.fa.fa-git
+          |  이해와 활용
+        h5 rev.201406
+
+      section(data-bespoke-state='emphatic')
+        //- img(src="")
+        h2 이종은
+        h3 인디 개발자
+        ul.badge_list
+          li
+            img(src='tidev.png', class="badge")
+            &nbsp;
+            img(src='tced.png', class="badge")
+            &nbsp;
+            img(src='titans.png', class="badge")
+          li
+
+      section(data-bespoke-state='hello')
+        span.small_title 여러분이 궁금합니다.
+        h2 당신은 누구십니까?^^
+        ul 
+          li 개발자?
+          li it 업종?
+          li 기타?
+          li 
+            i.fa.fa-desktop
+            |  컴퓨터로 업무보시죠?
+      
+      - smallTitle = "파일과 함께하는 일상"
+      section(data-bespoke-state='reveal',data-bespoke-hash="withfile")
+        h1
+          i.fa.fa-file-text.fa-3x
+        h3= smallTitle
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2 
+          i.fa.fa-user.pull-left
+          | 일상 업무
+        ui.fa-ul.bullet
+          li.bullet
+            i.fa-li.fa.fa-file-text-o 
+            | 파일 생성
+          li.bullet 
+            i.fa-li.fa.fa-pencil-square-o
+            | 파일 수정
+          li.bullet
+            i.fa-li.fa.fa-floppy-o
+            | 파일 저장
+          li.bullet
+            i.fa-li.fa.fa-repeat.fa-lg
+            i.fa.fa-pencil-square-o.fa-2x
+            | 
+            i.fa.fa-floppy-o.fa-2x
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2 
+          i.fa.fa-warning.red
+          |  긴급 상황 발생
+        ui.fa-ul.bullet
+          li.bullet
+            i.fa-li.fa.fa-frown-o
+            | 잘못된 내용으로 수정
+          li.bullet
+            i.fa-li.fa.fa-frown-o
+            | 삭제
+          li.bullet
+            i.fa-li.fa.fa-frown-o
+            | 파일 덮어 쓰기
+          li.bullet
+            i.fa-li.fa.fa-frown-o
+            | 컴퓨터 분실
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2.bullet Q. 대비책이 있나요?
+        //- h3.bullet A. 네 저는 이미 파일 잘 하고 있어요.
+        img.bullet(src="filename.jpg") 
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2.bullet 우리는 누구? 인간!
+        h3.bullet 인간은 도구를 사용하는 동물
+
+      - smallTitle = '파일 관리 도구의 탄생'
+      section(data-bespoke-state='reveal',data-bespoke-hash="toolHistory")
+        h1
+          i.fa.fa-wrench.fa-3x
+        h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2 도구의 구분
+        h3 Revision History Tracker :
+        p
+          i.fa.fa-google
+          |  google 문서의 '업데이트 기록보기', 
+          i.fa.fa-wordpress
+          |  워드프레스 '리비전'
+        br
+        h3 Revision Control Software :
+        p.bullet
+          | Git, SVN, Perforce, Mecurial, CVS...
+          img.w300(src="https://www.assembla.com/content/assets/img/content/products/features/vc-hosting.png")
+        h4.bullet 둘의 차이가 뭐죠?
+
+      section(data-bespoke-state='emphatic')
+        h2 왜 사용하나요?
+        ul.bullet
+          li.bullet 무언가 잘못되었을 때 복구를 돕기 위해
+          li.bullet 프로젝트 진행 중 과거의 어떤 시점으로 돌아갈 수 있게 하기 위해
+          li.bullet 여러사람이 작업할 때 쉽게 합치기 위해
+          li.bullet 누가 어떤 부분을 수정했는지 추적하기 위해
+          li.bullet 안전하고 자유롭게 작업하기 위해
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2
+          a(href="http://git-scm.com/") git-scm.com
+        img.w500(src="Git.png")
+      
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2.bullet SCM?
+        h3.bullet Source Code Management
+        br
+        br
+        h2.bullet Source Code?
+        h3.bullet 네! 개발자를 위한 도구입니다.
+
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle + " - git의 탄생"
+        h2 리누스 토발즈
+        img.w150(src="http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg")
+        br
+        p.bullet
+          i.fa.fa-linux.fa-3x.bullet
+          | &nbsp;&nbsp;&nbsp;
+          i.fa.fa-git.fa-3x.bullet
+        p.small_font.bullet
+          a(href="https://kldp.org/node/65588",target="_blank") Git을 만들게 된 이야기
+          | , 
+          a(href="http://git-scm.com/book/ko/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A7%A7%EA%B2%8C-%EB%B3%B4%EB%8A%94-Git%EC%9D%98-%EC%97%AD%EC%82%AC",target="_blank") 짧게 보는 Git 역사
+
+      - smallTitle="Git 바로 알기"
+      section(data-bespoke-state='reveal',data-bespoke-hash="gitOverview")
+        h1
+          i.fa.fa-git.fa-3x
+        h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2 설마?
+        h3  git 그리고 github
+        p
+          i.fa.fa-git.fa-5x
+          span.fa-stack.fa-5x.bullet(style="margin-top:-15%")
+            | ==
+            i.fa.fa-ban.fa-stack-2x.red.bullet
+          i.fa.fa-github.fa-5x
+      
+      section(data-bespoke-state='whatisthis')
+        span.small_title= smallTitle
+        h2 앞으로 쏟아질 용어들
+        br
+        br
+        br
+        ul
+          li Remote Repository, Local Repository
+          li Stage, Working Directory, Sanpshot,
+          li Commit, Checkout, Reset, Merge,
+          li HEAD, Branch, Tag,
+          li Pull, Push, Fork
+          li
+            i.fa.fa-ellipsis-h
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2
+          i.fa.fa-git
+          |  왜 좋은가?
+        ul.big_ul.fa-ul.bullet
+          li.bullet
+            i.fa-li.fa.fa-smile-o
+            | 빠르다
+          li.bullet
+            i.fa-li.fa.fa-smile-o
+            | 안전하다
+          li.bullet
+            i.fa-li.fa.fa-smile-o
+            | 자유롭다
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h1
+          i.fa.fa-desktop.fa-2x
+        h4 빠르고 안전하고 자유로운 이유 1.
+        h2
+          span.light 거의
+          |  모든 동작은
+          br
+          | 내 컴퓨터(Local)에서 동작한다.
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h4 빠르고 안전하고 자유로운 이유 2.
+        h2 분산버전 관리 시스템
+        img.w400(src="https://www.atlassian.com/git/migration/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file0/document/git-migration-centralized-vs-distributed.png")
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h1
+          i.fa.fa-eye.fa-2x
+        h4 빠르고 안전하고 자유로운 이유 3.
+        h2
+          i.fa.fa-git
+          | 은 당신이 한 
+          span.light 거의
+          |  모든 일을
+          br
+          | 알고 있다.
+
+      
+      - smallTitle="Git으로 기록하기"
+      section(data-bespoke-state='reveal',data-bespoke-hash="doGit")
+        h1
+          i.fa.fa-camera-retro.fa-3x
+        h3= smallTitle
+
+      section(data-bespoke-state='emphatic',data-bespoke-hash="install")
+        span.small_title= smallTitle
+        h2 
+          i.fa.fa-gear
+          |  설치 먼저
+        br
+        ul.big_ul
+          li
+            | Git : 
+            br
+            a(href="http://git-scm.com/") git-scm.com
+          li
+            | Source Tree : 
+            br
+            a(href="http://www.sourcetreeapp.com/") sourcetreeapp.com
+          li
+            | Sublime Text : 
+            br
+            a(href="http://www.sublimetext.com/2") sublimetext.com/2
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-git
+          |  저장소 만들기
+        pre.dark
+          code.language-bash.
+            git init
+        img.w300.bullet(src="http://strongloop.com/wp-content/uploads/2014/04/mind-blowing_1454.gif.pagespeed.ce.hxxM_pKi8A.gif")
+        pre.small_font.dark.bullet
+          code.language-bash
+            :markup
+              git init <directory>
+              git init --bare <directory>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 일단 파일 만들고 커밋해보자
+        pre.dark
+          code.language-bash
+            :markup
+              git add first.txt
+              git commit -m "first commit"
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2
+          i.fa.fa-camera-retro.fa-2x.red
+          br
+          span.red Commit
+          | 은 
+          span.red Snapshot
+          | 이다.
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          span.red add
+          | 는 
+          span.blue Stage 
+          | 위로 올리는 것
+        img.w400(src="http://fc02.deviantart.net/fs70/f/2011/004/5/c/glee_stage_by_periru3-d36gik6.jpg")
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 기록 절차
+        img.w300(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/03/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-add-addsnapshot.png")
+        pre.dark
+          code.language-bash
+            :markup
+              git add first.txt
+              git commit -m "first commit"
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 무엇이 생기고 어떤게 기록되나?
+        ul.fa-ul
+          li.bullet
+            i.fa-li.fa.fa-camera-retro
+            | Blob : 파일을 찰칵
+          li.bullet
+            i.fa-li.fa.fa-camera-retro
+            | Tree object : 폴더구조는 찰칵
+          li.bullet
+            i.fa-li.fa.fa-camera-retro
+            | Commit object : Tree의 hash와 Commit 부가정보를 담아 찰칵
+          //- li.bullet
+          //-   i.fa-li.fa.fa-hand-o-right
+          //-   | Tag object : Commit을 가리키는 Pointer
+          //- li.bullet
+          //-   i.fa-li.fa.fa-hand-o-right
+          //-   | Reference : Commit이나 Tag를 가리키는 Pointer
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-file-text-o
+            | README
+          li
+            i.fa-li.fa.fa-file-text-o
+            | src/hello.c
+        img.w500(src="http://wildlyinaccurate.com/wp-content/uploads/2014/05/tree-graph.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 현재 상태 및 기록 살펴보기
+        pre.dark
+          code.language-bash
+            :markup
+              git status
+              git log
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 파일 상태의 변화
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-file-text-o
+            | Untracked
+          li
+            i.fa-li.fa.fa-file-text-o
+            | Unmodified
+          li
+            i.fa-li.fa.fa-file-text-o
+            | Modified
+          li
+            i.fa-li.fa.fa-file-text-o
+            | Staged
+
+      - smallTitle="Git으로 되돌리기"
+      section(data-bespoke-state='reveal',data-bespoke-hash="doGit")
+        h1
+          i.fa.fa-backward.fa-3x
+        h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 방법 1. Checkout
+        p 전체 혹은 특정파일을 특정 커밋의 상태로 되돌린다.
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-backward
+            | Commit을 체크아웃
+          li
+            i.fa-li.fa.fa-backward
+            | File을 체크아웃
+          //- li
+          //-   i.fa-li.fa.fa-backward
+          //-   | Branch를 체크아웃
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Checkout 명령어 사용법
+        pre.dark
+          code.language-bash
+            :markup
+              git checkout <commit>
+              git checkout <commit> <file>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 방법 2. Revert
+        p 전체 혹은 특정파일을 특정 커밋의 상태로 되돌린다.
+
+      - smallTitle="Git으로 가지치기(Branch)"
+      section(data-bespoke-state='reveal')
+        h1
+          i.fa.fa-code-fork.fa-3x
+        h3= smallTitle
+
+      - smallTitle="Git 원격 저장소"
+      section(data-bespoke-state='reveal')
+        h1
+          i.fa.fa-cloud-upload.fa-3x
+        h3= smallTitle
+
+      - smallTitle="Git Workflow"
+      section(data-bespoke-state='reveal')
+        h1
+          i.fa.fa-group.fa-3x
+        h3= smallTitle
+
+
+      section(data-bespoke-state='success')
+        h1 감사합니다.
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 참고 자료
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-link
+            a(href="http://atlassian.com/git",target="_blank") Atlassian Git Tutorials
+          li
+            i.fa-li.fa.fa-link
+            a(href="http://wildlyinaccurate.com/a-hackers-guide-to-git",target="_blank") A Hacker’s Guide to Git
+
+
+
+    // build:js scripts/scripts.js
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-keys/dist/bespoke-keys.min.js')
+    script(src='bower_components/bespoke-touch/dist/bespoke-touch.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-scale/dist/bespoke-scale.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-progress/dist/bespoke-progress.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/bespoke-forms/dist/bespoke-forms.min.js')
+    script(src='bower_components/bespoke-tishadow/dist/bespoke-tishadow.js')
+    script(src='bower_components/bespoke-run/dist/bespoke-run.js')
+    //- script(src='bower_components/bespoke-jumpy/dist/bespoke-jumpy.js')
+    //- script(src='bower_components/bespoke-dir/dist/bespoke-dir.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
+    // endbuild
