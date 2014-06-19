@@ -412,7 +412,38 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 방법 2. Revert
-        p 전체 혹은 특정파일을 특정 커밋의 상태로 되돌린다.
+        p 특정 Commit을 되돌리는(Undo)하는 Commit을 생성한다.
+        pre.dark
+          code.language-bash
+            :markup
+              git revert <commit>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Checkout
+        p Commit 
+          strong.red 전 
+          | 변경사항은 Checkout!
+          br
+          | 커밋을 만들지 않고 Working Directory의 일부 혹은 전체 내용이 바뀜
+        h2 Revert
+        p Commit 
+          strong.red 후 
+          | 커밋 내용을 통째로 되돌릴때는 Revert!
+          br
+          | 커밋을 만들지 않고 Working Directory의 일부 혹은 전체 내용이 바뀜
+        
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-warning.fa-2x.red
+          br
+          | 방법 3. Reset
+        p 특정 Commit을 되돌리는(Undo)하는 Commit을 생성한다.
+        pre.dark
+          code.language-bash
+            :markup
+              git revert <commit>
 
       - smallTitle="Git으로 가지치기(Branch)"
       section(data-bespoke-state='reveal')
