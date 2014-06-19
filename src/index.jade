@@ -10,7 +10,9 @@ html
     link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
     link(rel='stylesheet', type='text/css', href='styles/main.css')
     link(rel='stylesheet', type='text/css', href='styles/ti.css')
+    link(rel="stylesheet", href="bower_components/octicons/octicons/octicons.css")
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+
     // endbuild
 
   body
@@ -117,9 +119,9 @@ html
         h3 Revision History Tracker :
         p
           i.fa.fa-google
-          |  google 문서의 '업데이트 기록보기', 
+          a(href="https://docs.google.com/a/yomybaby.com/document/d/1G-z2Q8_kAgv3qfBQ6te5c81ZdbjgMQ89vLLROb0R-dk/edit",target="_blank")  google 문서의 '업데이트 기록보기', 
           i.fa.fa-wordpress
-          |  워드프레스 '리비전'
+          a(href="https://yomybaby.wordpress.com/wp-admin/revision.php?revision=304",target="_blank")  워드프레스 '리비전'
         br
         h3 Revision Control Software :
         p.bullet
@@ -191,7 +193,7 @@ html
         br
         ul
           li Remote Repository, Local Repository
-          li Stage, Working Directory, Sanpshot,
+          li Staging Area, Index, Working Directory, Sanpshot,
           li Commit, Checkout, Reset, Merge,
           li HEAD, Branch, Tag,
           li Pull, Push, Fork
@@ -268,6 +270,9 @@ html
             | Sublime Text : 
             br
             a(href="http://www.sublimetext.com/2") sublimetext.com/2
+        h2
+          i.fa.fa-github Github.com 계정 만들기
+
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -331,7 +336,7 @@ html
             | Blob : 파일을 찰칵
           li.bullet
             i.fa-li.fa.fa-camera-retro
-            | Tree object : 폴더구조는 찰칵
+            | Tree object : 폴더구조를 찰칵
           li.bullet
             i.fa-li.fa.fa-camera-retro
             | Commit object : Tree의 hash와 Commit 부가정보를 담아 찰칵
@@ -366,21 +371,22 @@ html
         span.small_title.bullet= smallTitle
         h2 파일 상태의 변화
         ul.fa-ul
-          li
+          li.bullet
             i.fa-li.fa.fa-file-text-o
             | Untracked
-          li
-            i.fa-li.fa.fa-file-text-o
-            | Unmodified
-          li
-            i.fa-li.fa.fa-file-text-o
-            | Modified
-          li
+          li.bullet
             i.fa-li.fa.fa-file-text-o
             | Staged
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | Unmodified
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | Modified
+          
 
       - smallTitle="Git으로 되돌리기"
-      section(data-bespoke-state='reveal',data-bespoke-hash="doGit")
+      section(data-bespoke-state='reveal',data-bespoke-hash="undo")
         h1
           i.fa.fa-backward.fa-3x
         h3= smallTitle
@@ -421,17 +427,17 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 Checkout
-        p Commit 
-          strong.red 전 
+        p 
+          strong.red Commit 전 
           | 변경사항은 Checkout!
           br
           | 커밋을 만들지 않고 Working Directory의 일부 혹은 전체 내용이 바뀜
         h2 Revert
-        p Commit 
-          strong.red 후 
+        p 
+          strong.red Commit 후 
           | 커밋 내용을 통째로 되돌릴때는 Revert!
           br
-          | 커밋을 만들지 않고 Working Directory의 일부 혹은 전체 내용이 바뀜
+          | 되돌리는 내용을 담은 커밋을 발생시킨다.
         
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -439,11 +445,31 @@ html
           i.fa.fa-warning.fa-2x.red
           br
           | 방법 3. Reset
-        p 특정 Commit을 되돌리는(Undo)하는 Commit을 생성한다.
+        p 
+          span.red 이용에 주의해야 함. 위험한(?) 명령어
+          br
+          | File을 Reset하는 것은 Unstaged 상태로 만드는 것
+          br
+          | Commit Reset은 현재 Branch를 해당 Commit으로 이동하는 것
         pre.dark
           code.language-bash
             :markup
-              git revert <commit>
+              git reset <file>
+              git reset <commit>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Revert vs. Reset
+        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/undoing-changes/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_revert-vs-reset.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 방법 4. Clean
+        p Untracked File을 지움, .gitignore에 명시된 파일은 안지움
+        pre.dark
+          code.language-bash
+            :markup
+              git clean -f
 
       - smallTitle="Git으로 가지치기(Branch)"
       section(data-bespoke-state='reveal')
@@ -451,11 +477,90 @@ html
           i.fa.fa-code-fork.fa-3x
         h3= smallTitle
 
+      section(data-bespoke-state='branch')
+        span.small_title.bullet= smallTitle
+        h2 이리로 가도 되고, 저리로 가도 되고
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-code-fork
+          |  Branch 명령어 사용법
+        pre.dark
+          code.language-bash
+            :markup
+              git branch
+              git branch <branch>
+              git branch <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-check-circle-o 
+          |  Checkout 명령어를
+          br
+          | 이용한 
+          i.fa.fa-code-fork
+          |  Branch 다루기
+        pre.dark
+          code.language-bash
+            :markup
+              git checkout -b <branch>
+              git checkout <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-code-fork.fa-rotate-180
+          |  Merge
+          br
+          | 이용한 Branch 다루기
+        pre.dark
+          code.language-bash
+            :markup
+              git merge <branch>
+              git merge --no-ff <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 
+          i.fa.fa-code-fork.fa-rotate-180
+          |  Merge의 종류 1.
+        h2 Fast-Forward Merge
+        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png")
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 
+          i.fa.fa-code-fork.fa-rotate-180
+          |  Merge의 종류 2.
+        h2 3-way merge
+        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png")
+
       - smallTitle="Git 원격 저장소"
       section(data-bespoke-state='reveal')
         h1
           i.fa.fa-cloud-upload.fa-3x
         h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Local? Remote?
+        h3
+          i.fa.fa-desktop.fa-2x
+        img.w300(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/remote-repositories/pageSections/0/contentColumnTwo/0/imageBinary/git-tutorial-remote-repos.png",target="_blank")
+        h3.bullet
+          i.fa.fa-bitbucket.fa-2x
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          i.fa.fa-github-alt.fa-2x
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-flag-o.fa2x
+          br
+          | Remote를 만들어서 Push해보자
+
 
       - smallTitle="Git Workflow"
       section(data-bespoke-state='reveal')
