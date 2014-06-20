@@ -40,6 +40,45 @@ html
             img(src='titans.png', class="badge")
           li
 
+      section(data-bespoke-state='stair')
+        span.small_title 목차
+        h2 
+          //- i.fa.fa-list-alt
+          | 목차
+        ui.fa-ul
+          li
+            i.fa-li.fa.fa-file-text-o
+            a.whitelink(href="#withfile")
+              | 파일과 함께하는 일상
+          li
+            i.fa-li.fa.fa-wrench
+            a.whitelink(href="#toolHistory")
+              | 파일 관리 도구의 탄생
+          li
+            i.fa-li.fa.fa-git-square
+            a.whitelink(href="#gitOverview")
+              | 바로 알기
+          li
+            i.fa-li.fa.fa-camera-retro
+            a.whitelink(href="#doGit")
+              | 기록하기
+          li
+            i.fa-li.fa.fa-backward
+            a.whitelink(href="#undo")
+              | 되돌리기
+          li
+            i.fa-li.fa.fa-code-fork
+            a.whitelink(href="#branch")
+              | 가지치기(Branch)
+          li
+            i.fa-li.fa.fa-code-fork.fa-rotate-180
+            a.whitelink(href="#remote")
+              | 원격 저장소
+          li
+            i.fa-li.fa.fa-group
+            a.whitelink(href="#workflow")
+              | Workflow
+
       section(data-bespoke-state='hello')
         span.small_title 여러분이 궁금합니다.
         h2 당신은 누구십니까?^^
@@ -271,7 +310,7 @@ html
             br
             a(href="http://www.sublimetext.com/2") sublimetext.com/2
         h2
-          i.fa.fa-github Github.com 계정 만들기
+          i.fa.fa-github  Github.com 계정 만들기
 
 
       section(data-bespoke-state='emphatic')
@@ -472,7 +511,7 @@ html
               git clean -f
 
       - smallTitle="Git으로 가지치기(Branch)"
-      section(data-bespoke-state='reveal')
+      section(data-bespoke-state='reveal',data-bespoke-hash="branch")
         h1
           i.fa.fa-code-fork.fa-3x
         h3= smallTitle
@@ -538,7 +577,7 @@ html
         img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png")
 
       - smallTitle="Git 원격 저장소"
-      section(data-bespoke-state='reveal')
+      section(data-bespoke-state='reveal',data-bespoke-hash="remote")
         h1
           i.fa.fa-cloud-upload.fa-3x
         h3= smallTitle
@@ -557,24 +596,189 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 
-          i.fa.fa-flag-o.fa2x
+          i.fa.fa-cloud-upload.fa-2x
           br
           | Remote를 만들어서 Push해보자
+        pre.dark
+          code.language-bash
+            :markup
+              git remote
+              git remote -v
+              git remote add <name> <url>
+              git remote rm <name>
+              git remote rename <old-name> <new-name>
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 
+          i.fa.fa-star.red
+          |  그 특별한 remote 이름
+        h2 origin
 
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-cloud-download.fa-2x
+          br
+          | Fetch vs. Pull
+        p.bullet Remote에 있는 내용를 전부 가져오는 행위는 동일
+          br
+          | Local branch랑 합치면 Pull (내 작업 Working Directory에 영향)
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 다른 사람이 이미 remote를 만든 경우
+        h2 
+          i.fa.fa-cloud-download.fa-2x
+          br
+          | Clone 해보자
+        p Remote Repository를 내 local에다가 그대로 옮김
+        pre.dark
+          code.language-bash
+            :markup
+              git clone <repo>
+              git clone <repo> <directory>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-exclamation.fa-2x
+          br
+          | 이제 협업할 준비가 되었다!
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2
+          i.fa.fa-question.fa-4x
+          br
+          | 어떤 청책으로 협업 할 것인가?
 
       - smallTitle="Git Workflow"
-      section(data-bespoke-state='reveal')
+      section(data-bespoke-state='reveal',data-bespoke-hash="workflow")
         h1
           i.fa.fa-group.fa-3x
         h3= smallTitle
 
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 Workflow = Branching 정책(전략)
+        h2 다양한 정책들..
+        ul.fa-ul
+          li 
+            i.fa.fa-group.fa-li
+            | Centralized Workflow
+          li
+            i.fa.fa-group.fa-li
+            | Feature Branch Workflow
+          li
+            i.fa.fa-group.fa-li
+            | Gitflow Workflow
+          li 
+            i.fa.fa-group.fa-li
+            | Forking Workflow
 
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Centralized Workflow"
+        h4 
+          i.fa.fa-group
+          |  Branch 하나만 쓸께요.
+        h2 Centralized Workflow
+        div
+          img.w150(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file1/document/git-workflow-svn-push-local.png")
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          img.w200.bullet(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file2/document/git-workflow-svn-managingconflicts.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Centralized Workflow"
+        h4 
+          i.fa.fa-group
+          |  Branch 하나만 쓸께요.
+        h2 Centralized Workflow
+        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/05/contentFullWidth/00/content_files/file1/document/git-workflow-svn-6.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Centralized Workflow"
+        h4 
+          i.fa.fa-group
+          |  개발 단위(기능) 별로 branch 만들께요.
+        h2 Feature Branch Workflow
+        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Feature Branch Workflow"
+        h4 
+          i.fa.fa-group
+          |  Feature Branch Workflow : master는 항상 무결점!
+        h2 그럼 섞어서 확인은 어디서??
+        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Gitflow Workflow"
+        h4 
+          i.fa.fa-group
+          |  개발서버(develop), 실서버(master) 구분할께요.
+        h2 
+          | Gitflow Workflow
+        a(href="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png",target="_blank")
+          img.w300(src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Gitflow Workflow"
+        h4 
+          i.fa.fa-group
+          |  개발서버(develop), 실서버(master) 구분할께요.
+        h2 
+          a(href="https://github.com/nvie/gitflow",target="_blank") 
+            | Gitflow Workflow
+        h3 매번 git branch, checkout, merger,
+          br
+          | brach 삭제 등을 해야한다고요?
+        br
+        p.bullet.red 네, 하지만 우리는 도구를 사용하는 동물!
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Forking Workflow"
+        h4 
+          i.fa.fa-group
+          |  Remote Repository도 각각 따로 둘께요. 공식 Repository는 관리자만!
+        h2 
+          | Forking Workflow
+        br
+        i.fa.fa-star.fa-2x.blue
+        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file/git-workflows-forking.png")
+        p
+          span.green 개발자1
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          span.red 관리자
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          span.puple 개발자2
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Forking Workflow"
+        h4 
+          i.fa.fa-group
+          |  개발자1, 개발자2가 완료했다는 것을 관리자에게 어떻게 말해주지?
+        h2.bullet
+          i.fa.fa-github  
+          i.fa.fa-bitbucket  
+          |  Pull Request
+        p.bullet 내 Repository의 이 Branch를
+          br
+          | 공식 Repository의 그 Branch에 Pull해주세요.
+        img.w400.bullet(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/04/pageSections/07/contentFullWidth/0/content_files/file0/document/pull-request-7.png")
+
+      section(data-bespoke-state='success success2')
+        h2 준비된 내용은 여기까지!
+        h3.white 
+          a(href="http://learnbranch.urigit.com",target="_blank") 점검 실습
+          |  or QnA
+        p.gray 기타 : rebase, hook, .bash_profile ..
       section(data-bespoke-state='success')
         h1 감사합니다.
 
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 참고 자료
+      section(data-bespoke-state='emphatic', data-bespoke-hash="ref")
+        span.small_title.bullet 부록 1
+        h2 참고 자료 및 학습자료
         ul.fa-ul
           li
             i.fa-li.fa.fa-link
@@ -582,8 +786,9 @@ html
           li
             i.fa-li.fa.fa-link
             a(href="http://wildlyinaccurate.com/a-hackers-guide-to-git",target="_blank") A Hacker’s Guide to Git
-
-
+          li
+            i.fa-li.fa.fa-link
+            a(href="http://git-scm.com/book/ko",target="_blank") Pro Git
 
     // build:js scripts/scripts.js
     script(src='bower_components/bespoke.js/dist/bespoke.min.js')
