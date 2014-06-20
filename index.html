@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Git 제대로 써보기</title>
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article id="main-article">
+      <section data-bespoke-state="reveal">
+        <h1><i class="fa fa-git"></i> 제대로 써보기</h1>
+        <h3><i class="fa fa-git"></i> 이해와 활용</h3>
+        <h5>rev.201406</h5>
+      </section>
+      <section data-bespoke-state="emphatic">
+        <h2>이종은</h2>
+        <h3>인디 개발자</h3>
+        <ul class="badge_list">
+          <li><img src="tidev.png" class="badge">&nbsp;<img src="tced.png" class="badge">&nbsp;<img src="titans.png" class="badge"></li>
+          <li></li>
+        </ul>
+      </section>
+      <section data-bespoke-state="stair"><span class="small_title">목차</span>
+        <h2>목차
+        </h2>
+        <ui class="fa-ul">
+          <li><i class="fa-li fa fa-file-text-o"></i><a href="#withfile" class="whitelink">파일과 함께하는 일상</a></li>
+          <li><i class="fa-li fa fa-wrench"></i><a href="#toolHistory" class="whitelink">파일 관리 도구의 탄생</a></li>
+          <li><i class="fa-li fa fa-git-square"></i><a href="#gitOverview" class="whitelink">바로 알기</a></li>
+          <li><i class="fa-li fa fa-camera-retro"></i><a href="#doGit" class="whitelink">기록하기</a></li>
+          <li><i class="fa-li fa fa-backward"></i><a href="#undo" class="whitelink">되돌리기</a></li>
+          <li><i class="fa-li fa fa-code-fork"></i><a href="#branch" class="whitelink">가지치기(Branch)</a></li>
+          <li><i class="fa-li fa fa-code-fork fa-rotate-180"></i><a href="#remote" class="whitelink">원격 저장소</a></li>
+          <li><i class="fa-li fa fa-group"></i><a href="#workflow" class="whitelink">Workflow</a></li>
+        </ui>
+      </section>
+      <section data-bespoke-state="hello"><span class="small_title">여러분이 궁금합니다.</span>
+        <h2>당신은 누구십니까?^^</h2>
+        <ul>
+          <li>개발자?</li>
+          <li>it 업종?</li>
+          <li>기타?</li>
+          <li><i class="fa fa-desktop"></i> 컴퓨터로 업무보시죠?</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="withfile">
+        <h1><i class="fa fa-file-text fa-3x"></i></h1>
+        <h3>파일과 함께하는 일상</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일과 함께하는 일상</span>
+        <h2><i class="fa fa-user pull-left"></i>일상 업무</h2>
+        <ui class="fa-ul bullet">
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>파일 생성</li>
+          <li class="bullet"><i class="fa-li fa fa-pencil-square-o"></i>파일 수정</li>
+          <li class="bullet"><i class="fa-li fa fa-floppy-o"></i>파일 저장</li>
+          <li class="bullet"><i class="fa-li fa fa-repeat fa-lg"></i><i class="fa fa-pencil-square-o fa-2x"></i> <i class="fa fa-floppy-o fa-2x"></i></li>
+        </ui>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일과 함께하는 일상</span>
+        <h2><i class="fa fa-warning red"></i> 긴급 상황 발생</h2>
+        <ui class="fa-ul bullet">
+          <li class="bullet"><i class="fa-li fa fa-frown-o"></i>잘못된 내용으로 수정</li>
+          <li class="bullet"><i class="fa-li fa fa-frown-o"></i>삭제</li>
+          <li class="bullet"><i class="fa-li fa fa-frown-o"></i>파일 덮어 쓰기</li>
+          <li class="bullet"><i class="fa-li fa fa-frown-o"></i>컴퓨터 분실</li>
+        </ui>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일과 함께하는 일상</span>
+        <h2 class="bullet">Q. 대비책이 있나요?</h2><img src="filename.jpg" class="bullet">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일과 함께하는 일상</span>
+        <h2 class="bullet">우리는 누구? 인간!</h2>
+        <h3 class="bullet">인간은 도구를 사용하는 동물</h3>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="toolHistory">
+        <h1><i class="fa fa-wrench fa-3x"></i></h1>
+        <h3>파일 관리 도구의 탄생</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일 관리 도구의 탄생</span>
+        <h2>도구의 구분</h2>
+        <h3>Revision History Tracker :</h3>
+        <p><i class="fa fa-google"></i><a href="https://docs.google.com/a/yomybaby.com/document/d/1G-z2Q8_kAgv3qfBQ6te5c81ZdbjgMQ89vLLROb0R-dk/edit" target="_blank"> google 문서의 '업데이트 기록보기', </a><i class="fa fa-wordpress"></i><a href="https://yomybaby.wordpress.com/wp-admin/revision.php?revision=304" target="_blank"> 워드프레스 '리비전'</a></p><br>
+        <h3>Revision Control Software :</h3>
+        <p class="bullet">Git, SVN, Perforce, Mecurial, CVS...<img src="https://www.assembla.com/content/assets/img/content/products/features/vc-hosting.png" class="w300"></p>
+        <h4 class="bullet">둘의 차이가 뭐죠?</h4>
+      </section>
+      <section data-bespoke-state="emphatic">
+        <h2>왜 사용하나요?</h2>
+        <ul class="bullet">
+          <li class="bullet">무언가 잘못되었을 때 복구를 돕기 위해</li>
+          <li class="bullet">프로젝트 진행 중 과거의 어떤 시점으로 돌아갈 수 있게 하기 위해</li>
+          <li class="bullet">여러사람이 작업할 때 쉽게 합치기 위해</li>
+          <li class="bullet">누가 어떤 부분을 수정했는지 추적하기 위해</li>
+          <li class="bullet">안전하고 자유롭게 작업하기 위해</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일 관리 도구의 탄생</span>
+        <h2><a href="http://git-scm.com/">git-scm.com</a></h2><img src="Git.png" class="w500">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일 관리 도구의 탄생</span>
+        <h2 class="bullet">SCM?</h2>
+        <h3 class="bullet">Source Code Management</h3><br><br>
+        <h2 class="bullet">Source Code?</h2>
+        <h3 class="bullet">네! 개발자를 위한 도구입니다.</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">파일 관리 도구의 탄생 - git의 탄생</span>
+        <h2>리누스 토발즈</h2><img src="http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg" class="w150"><br>
+        <p class="bullet"><i class="fa fa-linux fa-3x bullet"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-git fa-3x bullet"></i></p>
+        <p class="small_font bullet"><a href="https://kldp.org/node/65588" target="_blank">Git을 만들게 된 이야기</a>, <a href="http://git-scm.com/book/ko/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A7%A7%EA%B2%8C-%EB%B3%B4%EB%8A%94-Git%EC%9D%98-%EC%97%AD%EC%82%AC" target="_blank">짧게 보는 Git 역사</a></p>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="gitOverview">
+        <h1><i class="fa fa-git fa-3x"></i></h1>
+        <h3>Git 바로 알기</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
+        <h2>설마?</h2>
+        <h3> git 그리고 github</h3>
+        <p><i class="fa fa-git fa-5x"></i><span style="margin-top:-15%" class="fa-stack fa-5x bullet">==<i class="fa fa-ban fa-stack-2x red bullet"></i></span><i class="fa fa-github fa-5x"></i></p>
+      </section>
+      <section data-bespoke-state="whatisthis"><span class="small_title">Git 바로 알기</span>
+        <h2>앞으로 쏟아질 용어들</h2><br><br><br>
+        <ul>
+          <li>Remote Repository, Local Repository</li>
+          <li>Staging Area, Index, Working Directory, Sanpshot,</li>
+          <li>Commit, Checkout, Reset, Merge,</li>
+          <li>HEAD, Branch, Tag,</li>
+          <li>Pull, Push, Fork</li>
+          <li><i class="fa fa-ellipsis-h"></i></li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
+        <h2><i class="fa fa-git"></i> 왜 좋은가?</h2>
+        <ul class="big_ul fa-ul bullet">
+          <li class="bullet"><i class="fa-li fa fa-smile-o"></i>빠르다</li>
+          <li class="bullet"><i class="fa-li fa fa-smile-o"></i>안전하다</li>
+          <li class="bullet"><i class="fa-li fa fa-smile-o"></i>자유롭다</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 바로 알기</span>
+        <h1><i class="fa fa-desktop fa-2x"></i></h1>
+        <h4>빠르고 안전하고 자유로운 이유 1.</h4>
+        <h2><span class="light">거의</span> 모든 동작은<br>내 컴퓨터(Local)에서 동작한다.</h2>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
+        <h4>빠르고 안전하고 자유로운 이유 2.</h4>
+        <h2>분산버전 관리 시스템</h2><img src="https://www.atlassian.com/git/migration/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file0/document/git-migration-centralized-vs-distributed.png" class="w400">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
+        <h1><i class="fa fa-eye fa-2x"></i></h1>
+        <h4>빠르고 안전하고 자유로운 이유 3.</h4>
+        <h2><i class="fa fa-git"></i>은 당신이 한 <span class="light">거의</span> 모든 일을<br>알고 있다.</h2>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="doGit">
+        <h1><i class="fa fa-camera-retro fa-3x"></i></h1>
+        <h3>Git으로 기록하기</h3>
+      </section>
+      <section data-bespoke-state="emphatic" data-bespoke-hash="install"><span class="small_title">Git으로 기록하기</span>
+        <h2><i class="fa fa-gear"></i> 설치 먼저</h2><br>
+        <ul class="big_ul">
+          <li>Git : <br><a href="http://git-scm.com/">git-scm.com</a></li>
+          <li>Source Tree : <br><a href="http://www.sourcetreeapp.com/">sourcetreeapp.com</a></li>
+          <li>Sublime Text : <br><a href="http://www.sublimetext.com/2">sublimetext.com/2</a></li>
+        </ul>
+        <h2><i class="fa fa-github"> Github.com 계정 만들기</i></h2>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2><i class="fa fa-git"></i> 저장소 만들기</h2>
+        <pre class="dark"><code class="language-bash">git init</code></pre><img src="http://strongloop.com/wp-content/uploads/2014/04/mind-blowing_1454.gif.pagespeed.ce.hxxM_pKi8A.gif" class="w300 bullet">
+        <pre class="small_font dark bullet"><code class="language-bash">git init &lt;directory&gt;
+git init --bare &lt;directory&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2>일단 파일 만들고 커밋해보자</h2>
+        <pre class="dark"><code class="language-bash">git add first.txt
+git commit -m &quot;first commit&quot;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2><i class="fa fa-camera-retro fa-2x red"></i><br><span class="red">Commit</span>은 <span class="red">Snapshot</span>이다.</h2>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2><span class="red">add</span>는 <span class="blue">Stage </span>위로 올리는 것</h2><img src="http://fc02.deviantart.net/fs70/f/2011/004/5/c/glee_stage_by_periru3-d36gik6.jpg" class="w400">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2>기록 절차</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/03/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-add-addsnapshot.png" class="w300">
+        <pre class="dark"><code class="language-bash">git add first.txt
+git commit -m &quot;first commit&quot;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2>무엇이 생기고 어떤게 기록되나?</h2>
+        <ul class="fa-ul">
+          <li class="bullet"><i class="fa-li fa fa-camera-retro"></i>Blob : 파일을 찰칵</li>
+          <li class="bullet"><i class="fa-li fa fa-camera-retro"></i>Tree object : 폴더구조를 찰칵</li>
+          <li class="bullet"><i class="fa-li fa fa-camera-retro"></i>Commit object : Tree의 hash와 Commit 부가정보를 담아 찰칵</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-file-text-o"></i>README</li>
+          <li><i class="fa-li fa fa-file-text-o"></i>src/hello.c</li>
+        </ul><img src="http://wildlyinaccurate.com/wp-content/uploads/2014/05/tree-graph.png" class="w500">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2>현재 상태 및 기록 살펴보기</h2>
+        <pre class="dark"><code class="language-bash">git status
+git log
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 기록하기</span>
+        <h2>파일 상태의 변화</h2>
+        <ul class="fa-ul">
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>Untracked</li>
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>Staged</li>
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>Unmodified</li>
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>Modified</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="undo">
+        <h1><i class="fa fa-backward fa-3x"></i></h1>
+        <h3>Git으로 되돌리기</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2>방법 1. Checkout</h2>
+        <p>전체 혹은 특정파일을 특정 커밋의 상태로 되돌린다.</p>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-backward"></i>Commit을 체크아웃</li>
+          <li><i class="fa-li fa fa-backward"></i>File을 체크아웃</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2>Checkout 명령어 사용법</h2>
+        <pre class="dark"><code class="language-bash">git checkout &lt;commit&gt;
+git checkout &lt;commit&gt; &lt;file&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2>방법 2. Revert</h2>
+        <p>특정 Commit을 되돌리는(Undo)하는 Commit을 생성한다.</p>
+        <pre class="dark"><code class="language-bash">git revert &lt;commit&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2>Checkout</h2>
+        <p><strong class="red">Commit 전 </strong>변경사항은 Checkout!<br>커밋을 만들지 않고 Working Directory의 일부 혹은 전체 내용이 바뀜</p>
+        <h2>Revert</h2>
+        <p><strong class="red">Commit 후 </strong>커밋 내용을 통째로 되돌릴때는 Revert!<br>되돌리는 내용을 담은 커밋을 발생시킨다.</p>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2><i class="fa fa-warning fa-2x red"></i><br>방법 3. Reset</h2>
+        <p><span class="red">이용에 주의해야 함. 위험한(?) 명령어</span><br>File을 Reset하는 것은 Unstaged 상태로 만드는 것<br>Commit Reset은 현재 Branch를 해당 Commit으로 이동하는 것</p>
+        <pre class="dark"><code class="language-bash">git reset &lt;file&gt;
+git reset &lt;commit&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2>Revert vs. Reset</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/undoing-changes/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_revert-vs-reset.png" class="w200">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
+        <h2>방법 4. Clean</h2>
+        <p>Untracked File을 지움, .gitignore에 명시된 파일은 안지움</p>
+        <pre class="dark"><code class="language-bash">git clean -f
+</code></pre>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="branch">
+        <h1><i class="fa fa-code-fork fa-3x"></i></h1>
+        <h3>Git으로 가지치기(Branch)</h3>
+      </section>
+      <section data-bespoke-state="branch"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2>이리로 가도 되고, 저리로 가도 되고</h2>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-code-fork"></i> Branch 명령어 사용법</h2>
+        <pre class="dark"><code class="language-bash">git branch
+git branch &lt;branch&gt;
+git branch &lt;branch&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-check-circle-o"></i> Checkout 명령어를<br>이용한 <i class="fa fa-code-fork"></i> Branch 다루기</h2>
+        <pre class="dark"><code class="language-bash">git checkout -b &lt;branch&gt;
+git checkout &lt;branch&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-code-fork fa-rotate-180"></i> Merge<br>이용한 Branch 다루기</h2>
+        <pre class="dark"><code class="language-bash">git merge &lt;branch&gt;
+git merge --no-ff &lt;branch&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 1.</h4>
+        <h2>Fast-Forward Merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png" class="w200">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 2.</h4>
+        <h2>3-way merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png" class="w200">
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="remote">
+        <h1><i class="fa fa-cloud-upload fa-3x"></i></h1>
+        <h3>Git 원격 저장소</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h2>Local? Remote?</h2>
+        <h3><i class="fa fa-desktop fa-2x"></i></h3><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/remote-repositories/pageSections/0/contentColumnTwo/0/imageBinary/git-tutorial-remote-repos.png" target="_blank" class="w300">
+        <h3 class="bullet"><i class="fa fa-bitbucket fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-github-alt fa-2x"></i></h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h2><i class="fa fa-cloud-upload fa-2x"></i><br>Remote를 만들어서 Push해보자</h2>
+        <pre class="dark"><code class="language-bash">git remote
+git remote -v
+git remote add &lt;name&gt; &lt;url&gt;
+git remote rm &lt;name&gt;
+git remote rename &lt;old-name&gt; &lt;new-name&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h4><i class="fa fa-star red"></i> 그 특별한 remote 이름</h4>
+        <h2>origin</h2>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h2><i class="fa fa-cloud-download fa-2x"></i><br>Fetch vs. Pull</h2>
+        <p class="bullet">Remote에 있는 내용를 전부 가져오는 행위는 동일<br>Local branch랑 합치면 Pull (내 작업 Working Directory에 영향)</p>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h4>다른 사람이 이미 remote를 만든 경우</h4>
+        <h2><i class="fa fa-cloud-download fa-2x"></i><br>Clone 해보자</h2>
+        <p>Remote Repository를 내 local에다가 그대로 옮김</p>
+        <pre class="dark"><code class="language-bash">git clone &lt;repo&gt;
+git clone &lt;repo&gt; &lt;directory&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h2><i class="fa fa-exclamation fa-2x"></i><br>이제 협업할 준비가 되었다!</h2>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h2><i class="fa fa-question fa-4x"></i><br>어떤 청책으로 협업 할 것인가?</h2>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="workflow">
+        <h1><i class="fa fa-group fa-3x"></i></h1>
+        <h3>Git Workflow</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow</span>
+        <h4>Workflow = Branching 정책(전략)</h4>
+        <h2>다양한 정책들..</h2>
+        <ul class="fa-ul">
+          <li><i class="fa fa-group fa-li"></i>Centralized Workflow</li>
+          <li><i class="fa fa-group fa-li"></i>Feature Branch Workflow</li>
+          <li><i class="fa fa-group fa-li"></i>Gitflow Workflow</li>
+          <li><i class="fa fa-group fa-li"></i>Forking Workflow</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Centralized Workflow</span>
+        <h4><i class="fa fa-group"></i> Branch 하나만 쓸께요.</h4>
+        <h2>Centralized Workflow</h2>
+        <div><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file1/document/git-workflow-svn-push-local.png" class="w150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file2/document/git-workflow-svn-managingconflicts.png" class="w200 bullet"></div>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Centralized Workflow</span>
+        <h4><i class="fa fa-group"></i> Branch 하나만 쓸께요.</h4>
+        <h2>Centralized Workflow</h2><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/05/contentFullWidth/00/content_files/file1/document/git-workflow-svn-6.png" class="w300">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Centralized Workflow</span>
+        <h4><i class="fa fa-group"></i> 개발 단위(기능) 별로 branch 만들께요.</h4>
+        <h2>Feature Branch Workflow</h2><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png" class="w300">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Feature Branch Workflow</span>
+        <h4><i class="fa fa-group"></i> Feature Branch Workflow : master는 항상 무결점!</h4>
+        <h2>그럼 섞어서 확인은 어디서??</h2><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png" class="w300">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Gitflow Workflow</span>
+        <h4><i class="fa fa-group"></i> 개발서버(develop), 실서버(master) 구분할께요.</h4>
+        <h2>Gitflow Workflow</h2><a href="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" target="_blank"><img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" class="w300"></a>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Gitflow Workflow</span>
+        <h4><i class="fa fa-group"></i> 개발서버(develop), 실서버(master) 구분할께요.</h4>
+        <h2><a href="https://github.com/nvie/gitflow" target="_blank">Gitflow Workflow</a></h2>
+        <h3>매번 git branch, checkout, merger,<br>brach 삭제 등을 해야한다고요?</h3><br>
+        <p class="bullet red">네, 하지만 우리는 도구를 사용하는 동물!</p>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Forking Workflow</span>
+        <h4><i class="fa fa-group"></i> Remote Repository도 각각 따로 둘께요. 공식 Repository는 관리자만!</h4>
+        <h2>Forking Workflow</h2><br><i class="fa fa-star fa-2x blue"></i><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file/git-workflows-forking.png" class="w300">
+        <p><span class="green">개발자1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">관리자</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="puple">개발자2</span></p>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Forking Workflow</span>
+        <h4><i class="fa fa-group"></i> 개발자1, 개발자2가 완료했다는 것을 관리자에게 어떻게 말해주지?</h4>
+        <h2 class="bullet"><i class="fa fa-github"> </i><i class="fa fa-bitbucket"> </i> Pull Request</h2>
+        <p class="bullet">내 Repository의 이 Branch를<br>공식 Repository의 그 Branch에 Pull해주세요.</p><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/04/pageSections/07/contentFullWidth/0/content_files/file0/document/pull-request-7.png" class="w400 bullet">
+      </section>
+      <section data-bespoke-state="success success2">
+        <h2>준비된 내용은 여기까지!</h2>
+        <h3 class="white"><a href="http://learnbranch.urigit.com" target="_blank">점검 실습</a> or QnA</h3>
+        <p class="gray">기타 : rebase, hook, .bash_profile ..</p>
+      </section>
+      <section data-bespoke-state="success">
+        <h1>감사합니다.</h1>
+      </section>
+      <section data-bespoke-state="emphatic" data-bespoke-hash="ref"><span class="small_title bullet">부록 1</span>
+        <h2>참고 자료 및 학습자료</h2>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-link"></i><a href="http://atlassian.com/git" target="_blank">Atlassian Git Tutorials</a></li>
+          <li><i class="fa-li fa fa-link"></i><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git" target="_blank">A Hacker’s Guide to Git</a></li>
+          <li><i class="fa-li fa fa-link"></i><a href="http://git-scm.com/book/ko" target="_blank">Pro Git</a></li>
+        </ul>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

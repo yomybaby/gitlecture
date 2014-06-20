@@ -1,0 +1,281 @@
+.badge {
+  width: 70px;
+  height: 70px;
+}
+.big_badge {
+  width: 150px;
+  height: 150px;
+}
+body {
+  font-family: 'AppleSDGothicNeo-UltraLight';
+  font-weight: normal;
+}
+span.small_title {
+  left: 10px;
+  top: 10px;
+  position: absolute;
+  font-size: 10px;
+}
+.lecture_list {
+  text-align: left;
+  width: 300px !important;
+}
+.small_font {
+  font-size: 12px;
+}
+.very_small_font {
+  font-size: 9px;
+}
+.no_padding {
+  padding: 0 !important;
+}
+.medium_font {
+  font-size: 15px;
+}
+.force_gray_font {
+  color: #808080 !important;
+}
+.gray {
+  color: #888;
+}
+pre.left {
+  float: left;
+}
+pre.right {
+  float: right;
+}
+.reveal {
+  background: radial-gradient(circle, #555a5f, #1c1e20);
+  background-color: #282a2d;
+}
+.reveal section {
+  background-color: transparent;
+  color: #fff;
+}
+.reveal  section h3 {
+  color: #aaa;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1000;
+}
+.emphatic .background {
+  background-image: none;
+}
+.fullthrottle section {
+  background-color: transparent;
+  color: #fff;
+}
+.fullthrottle .background {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0 0 300px rgba(0,0,0,0.6);
+  box-shadow: inset 0 0 300px rgba(0,0,0,0.6);
+  z-index: -1;
+  background-image: url("../images/fullthrottle.gif");
+}
+[data-bespoke-state^='fullthrottle'] a {
+  color: #cc5200;
+}
+.success section {
+  background-color: transparent;
+  color: #fff;
+}
+.success .background {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0 0 300px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 300px rgba(0,0,0,0.5);
+  z-index: -1;
+  -webkit-filter: grayscale(0.5) brightness(0.6);
+  -moz-filter: grayscale(0.5) brightness(0.6);
+  filter: grayscale(0.5) brightness(0.6);
+  background-image: url("http://www.thedisabledcubicle.com/wp-content/uploads/2012/11/apollorockygif1.gif");
+}
+.hello section {
+  background-color: transparent;
+  color: #fff;
+}
+.background {
+  display: block;
+  position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  -webkit-filter: grayscale(0.3) brightness(0.6);
+  -moz-filter: grayscale(0.3) brightness(0.6);
+  filter: grayscale(0.3) brightness(0.6);
+  z-index: -1000;
+  width: 20%;
+  height: 20%;
+  top: 50%;
+  left: 50%;
+  margin-top: -5%;
+  margin-left: -10%;
+  -webkit-transform: scale(5.5);
+  -moz-transform: scale(5.5);
+  -ms-transform: scale(5.5);
+  -o-transform: scale(5.5);
+}
+.hello .background {
+  background-image: url("http://stream1.gifsoup.com/view/405055/oh-hello-o.gif");
+}
+.startline .background {
+  background-image: url("http://stream1.gifsoup.com/view/23915/mx-start-by-j89-o.gif");
+}
+.startline section {
+  background-color: transparent;
+  color: #fff;
+}
+.conversation .background {
+  background-image: url("http://stream1.gifsoup.com/view3/2335654/conversation-o.gif");
+}
+.conversation section {
+  background-color: transparent;
+  color: #fff;
+}
+.success2 .background {
+  background-image: url("http://strongloop.com/wp-content/uploads/2014/04/thumbs_up_nph.gif");
+}
+.whatisthis .background {
+  background-image: url("http://strongloop.com/wp-content/uploads/2014/04/giphy.gif");
+}
+.whatisthis section {
+  background-color: transparent;
+  color: #fff;
+}
+.branch .background {
+  background-image: url("http://sabo.dasannetworks.com/20111/img/blmv7.jpg");
+}
+.branch section {
+  background-color: transparent;
+  color: #fff;
+}
+.stair .background {
+  background-image: url("../images/mario.gif");
+}
+.stair section {
+  background-color: transparent;
+  color: #fff;
+}
+p {
+  margin-left: 0;
+  margin-right: 0;
+}
+code.small {
+  font-size: 13px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 1px 3px;
+}
+pre.small_font {
+  padding: 10px !important;
+}
+pre.dark {
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: auto;
+  -webkit-hyphens: none;
+  background-attachment: scroll;
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border-box;
+  background-color: #2d2d2d;
+  background-image: none;
+  -webkit-background-origin: padding;
+  -moz-background-origin: padding;
+  background-origin: padding-box;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+  border-bottom-left-radius: 7.981956481933594px;
+  border-bottom-right-radius: 7.981956481933594px;
+  border-top-left-radius: 7.981956481933594px;
+  border-top-right-radius: 7.981956481933594px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ccc;
+  direction: ltr;
+  display: block;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-weight: normal;
+  margin-bottom: 4.5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 4.5px;
+  overflow-x: auto;
+  overflow-y: auto;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: 0px;
+}
+img {
+  width: 500px;
+}
+img.w400 {
+  width: 400px;
+}
+img.w300 {
+  width: 300px;
+}
+img.w200 {
+  width: 200px;
+}
+img.w150 {
+  width: 150px;
+}
+.fa-ul>li {
+  text-align: left !important;
+}
+.red {
+  color: #ff2d55;
+}
+.green {
+  color: #4cd964;
+}
+.blue {
+  color: #007aff;
+}
+.puple {
+  color: #c86edf;
+}
+.white {
+  color: #f7f7f7;
+}
+.whitelink {
+  color: #f7f7f7 !important;
+  text-decoration: underline;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+h3 {
+  margin-bottom: 0px;
+}
+ul.big_ul>li {
+  font-size: 30px;
+}
+span.light {
+  color: #c7c7cc;
+}

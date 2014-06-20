@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>bespoke-tishadow demo</title>
+    <link rel="stylesheet" type="text/css" href="prism-tomorrow.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+
+    <h1>bespoke-tishadow</h1>
+
+    <article>
+      <section>
+        <h2>Bespoke.js is nice</h2>
+      </section>
+      <section>
+        <h2>Bespoke.js TiShadow plugin makes it nicer</h2>
+      </section>
+      <section>
+        <h2>Click to execute code snippets</h2>
+        <p>Add the <code>data-bespoke-tishadow</code> attribute to your code blocks</p>
+      <pre>
+        <code class="language-markup">
+&lt;code class="language-javascript" data-bespoke-tishadow&gt;
+  alert("hi");  
+&lt;/code&gt;
+        </code>
+      </pre>
+      </section>
+      <section>
+        <h2>Send snippets to repl</h2>
+        <p>Use the <code>TiShadow.repl(fn)</code> command</p>
+      <pre>
+        <code class="language-markup">
+&lt;a href="javascript:TiShadow.repl(function() {win.close();})"&gt;Close Window&lt;/a&gt;
+        </code>
+      </pre>
+      </section>
+      <section>
+        <h2>logs piped to console</h2>
+      </section>
+      <section>
+        <h2>In Action</h2>
+        <pre>
+        <code class="language-javascript" data-bespoke-tishadow>
+var win = Ti.UI.createWindow({
+  backgroundColor: 'blue'
+});
+var label = Ti.UI.createLabel({
+  text: "Bespoke.js is Nice",
+  color: 'white',
+  font: {fontSize: '30dp', fontWeight:'bold'}
+});
+win.add(label);
+console.debug(win);
+win.open();
+        </code>
+        </pre>
+        <a href="javascript:TiShadow.repl(function() {win.close();})">Close Window</a>
+      </section>
+      <section>
+        <h2>In Action</h2>
+        <p>All repl commands are supported</p>
+        <a href="javascript:TiShadow.repl(function() {launchApp('TiSiren')})">Launch TiSiren</a>
+        <a href="javascript:TiShadow.repl(function() {closeApp()})">Close App</a>
+      </section>
+    </article>
+
+    <script src="../node_modules/bespoke/dist/bespoke.js"></script>
+    <script src="../node_modules/bespoke-keys/dist/bespoke-keys.js"></script>
+    <script src="../node_modules/bespoke-touch/dist/bespoke-touch.js"></script>
+    <script src="../src/bespoke-tishadow.js"></script>
+    <script src="demo.js"></script>
+    <script src="prism.js"></script>
+  </body>
+</html>
