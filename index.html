@@ -10,7 +10,7 @@
   </head>
   <body>
     <article id="main-article">
-      <section data-bespoke-state="reveal">
+      <section data-bespoke-state="reveal"><span class="small_title"><i class="fa fa-warning"></i>좌우키 혹은 스페이스키로 페이지 이동하세요.</span>
         <h1><i class="fa fa-git"></i> 제대로 써보기</h1>
         <h3><i class="fa fa-git"></i> 이해와 활용</h3>
         <h5>rev.201406</h5>
@@ -409,5 +409,9 @@ git clone &lt;repo&gt; &lt;directory&gt;
       </section>
     </article>
     <script src="scripts/scripts.js"></script>
+    <script>
+      var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+      if(!is_chrome) alert('크롬 브라우져로 보시길 권장합니다.');
+    </script>
   </body>
 </html>
