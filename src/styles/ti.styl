@@ -1,8 +1,13 @@
 @import 'nib' // CSS3 extensions for Stylus: http://visionmedia.github.io/nib/
 
+filter(gn,bn)
+  -webkit-filter: grayscale(gn) brightness(bn);
+  -moz-filter: grayscale(gn) brightness(bn);
+  filter: grayscale(gn) brightness(bn);
 
 // variables!
-bg_bright = 0.7
+bg_bright = 0.9
+bg_gray = 0.3
 
 
 // base
@@ -62,7 +67,7 @@ pre.right
   color : white
 
 .reveal  section h3
-  color : #aaa
+  color : #ccc
 
 .background
   position: absolute
@@ -99,9 +104,7 @@ pre.right
   background-repeat: no-repeat
   box-shadow: inset 0 0 300px rgba(0,0,0,0.5)
   z-index: -1
-  -webkit-filter: grayscale(0.5) brightness(bg_bright);
-  -moz-filter: grayscale(0.5) brightness(bg_bright);
-  filter: grayscale(0.5) brightness(bg_bright);
+  filter(0.5,bg_bright);
   background-image: url("http://www.thedisabledcubicle.com/wp-content/uploads/2012/11/apollorockygif1.gif");
 
 .hello section
@@ -115,9 +118,10 @@ pre.right
   background-position: center center;
   background-repeat: no-repeat;
   content: "";
-  -webkit-filter: grayscale(0.3) brightness(bg_bright);
-  -moz-filter: grayscale(0.3) brightness(bg_bright);
-  filter: grayscale(0.3) brightness(bg_bright);
+  filter(bg_gray,bg_bright);
+  // -webkit-filter: grayscale(0.3) brightness(bg_bright);
+  // -moz-filter: grayscale(0.3) brightness(bg_bright);
+  // filter: grayscale(0.3) brightness(bg_bright);
   z-index: -1000;
   width: 20%;
   height: 20%;
@@ -165,9 +169,7 @@ pre.right
 
 .stair .background
  background-image: url("../images/mario.gif");
- // -webkit-filter: none;
- // -moz-filter: none;
- // filter: none;
+ filter(bg_gray,bg_bright+0.3);
 
 .stair section
   background-color:transparent
@@ -263,9 +265,7 @@ img.w150
   float: right;
 
 .brighter
-  -webkit-filter: brightness(1.4);
-  -moz-filter: brightness(1.4);
-  filter: brightness(1.4);
+  filter(1.4,1);
 h3
   margin-bottom : 0px;
 
@@ -273,3 +273,6 @@ ul.big_ul>li
   font-size : 30px;
 span.light
   color : #C7C7CC
+
+.txtLeft
+  text-align:left

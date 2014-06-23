@@ -16,6 +16,15 @@ html
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
   body
     - var smallTitle ='';
+    section(data-bespoke-state='emphatic')
+        //- img(src="")
+        h2 추가 언급할만 한것
+        ul
+          li ammend
+          li HEAD
+          li stash
+          li tag와 branch 차이 : 커밋 발생시 해당 최신 커밋으로 이동 여부
+
     article#main-article
       section(data-bespoke-state='reveal')
         span.small_title
@@ -32,7 +41,7 @@ html
       section(data-bespoke-state='emphatic')
         //- img(src="")
         h2 이종은
-        h3 인디 개발자
+        h3 인디 개발자 - Yo Studio
         br
         ui.fa-ul
           li
@@ -51,7 +60,12 @@ html
             img(src='tced.png', class="badge")
             &nbsp;
             img(src='titans.png', class="badge")
-          li
+        p
+          i.fa.fa-twitter
+          a(href="https://twitter.com/yomybaby")  @yomybaby
+          br
+          i.fa.fa-github
+          a(href="https://github.com/yomybaby")  yomybaby
 
       section(data-bespoke-state='stair')
         span.small_title 목차
@@ -96,9 +110,9 @@ html
         span.small_title 여러분이 궁금합니다.
         h2 당신은 누구십니까?^^
         ul 
-          li 개발자?
-          li it 업종?
-          li 기타?
+          li 어떤 일을 하시는 개발자?
+          li Git을 어떻게 사용하고 계신가요?
+          li 어떤 Workflow(Branch 전략)을 사용하시나요?
           li 
             i.fa.fa-desktop
             |  컴퓨터로 업무보시죠?
@@ -196,7 +210,7 @@ html
           li.bullet
             i.fa.fa-exclamation.fa-li
             | 누가 어떤 부분을 수정했는지 추적하기 위해
-          li.bullet
+          li.bullet.red
             i.fa.fa-exclamation.fa-li
             | 안전하고 자유롭게 작업하기 위해
       section(data-bespoke-state='emphatic')
@@ -212,8 +226,12 @@ html
         h3.bullet Source Code Management
         br
         br
-        h2.bullet Source Code?
-        h3.bullet 네! 개발자를 위한 도구입니다.
+        h2.bullet 
+          li.fa.fa-code
+          |  Source Code?
+        h3.bullet 네! 개발자를 위한 
+          i.fa.fa-wrench
+          |  도구입니다.
 
 
       section(data-bespoke-state='emphatic')
@@ -382,16 +400,22 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 기록 절차
-        img.w300(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/03/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-add-addsnapshot.png")
+        img.w400(src="addcommit.png")
         pre.dark
           code.language-bash
             :markup
               git add first.txt
               git commit -m "first commit"
+        pre.dark.bullet
+          code.language-bash
+            :markup
+              git commit -a -m "first commit"
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
-        h2 무엇이 생기고 어떤게 기록되나?
+        h2 Commit
+          br
+          | 무엇이 생기고 어떤게 기록되나?
         ul.fa-ul
           li.bullet
             i.fa-li.fa.fa-camera-retro
@@ -430,6 +454,7 @@ html
             :markup
               git status
               git log
+              git log -p
               git reflog
 
       section(data-bespoke-state='emphatic')
@@ -460,25 +485,52 @@ html
         span.small_title.bullet= smallTitle
         h2 방법 1. Checkout
         p 전체 혹은 특정파일을 특정 커밋의 상태로 되돌린다.
-        ul.fa-ul
-          li
-            i.fa-li.fa.fa-backward
-            | Commit을 체크아웃
-          li
-            i.fa-li.fa.fa-backward
-            | File을 체크아웃
-          //- li
-          //-   i.fa-li.fa.fa-backward
-          //-   | Branch를 체크아웃
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 Checkout 명령어 사용법
         pre.dark
           code.language-bash
             :markup
               git checkout <commit>
               git checkout <commit> <file>
+        
+          //- li
+          //-   i.fa-li.fa.fa-backward
+          //-   | Branch를 체크아웃
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-backward
+          | &nbsp;
+          i.fa.fa-file-o
+          |  File을 Checkout
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-angle-right
+            strong 사용 상황 
+            | : 특정 파일을 해당 커밋 시점의 파일 모습으로 바꾸고 싶을 때
+          li.bullet
+            i.fa-li.fa.fa-angle-right
+            strong 일어나는 일
+            |  : 특정 파일을 특정 커밋의 상태로 되돌리고 파일을 stage에 올린다. (Modified 사라짐)
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-backward
+          | &nbsp;
+          i.fa.fa-camera-retro
+          |  Commit/Branch로 Checkout
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-angle-right
+            strong  사용 상황
+            |  : 모든 파일을 특정 커밋 시점의 모습으로 바꾸고 싶을 때
+          li.bullet
+            i.fa-li.fa.fa-angle-right
+            strong  일어나는 일
+            |  : 
+            br 
+            | 변경해야할 파일이 Modified 상태이면 Checkout이 진행이 되지 않고
+            br 
+            | 변경할 필요가 없는 파일은 Modifed 상태일 경우에는 Checkout이 진행되고 Modified는 유지된다.
+       
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -555,6 +607,38 @@ html
         h1
           i.fa.fa-code-fork.fa-3x
         h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h3 Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻?
+        ul.fa-ul
+          li.bullet
+            | A. 프로젝트 
+            i.fa.fa-folder-open-o
+            |  폴더를 통째로 복사한다? (ex.myproject_원본)
+        h3.bullet
+          strong 빠르고 값싼 Branch는 Git 최고의 장점
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-code-fork
+          |  Branch의 실체 공개!
+        ul.fa-ul
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 파일 1개로 구성
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 파일명 == Branch 명
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 내용 : 가리키는 커밋의 Hash
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 용량 : 41 Byte
+            
+        h3.bullet 단순 포인터!
 
       section(data-bespoke-state='branch')
         span.small_title.bullet= smallTitle
@@ -772,7 +856,7 @@ html
             | Gitflow Workflow
         h3 매번 git branch, checkout, merger,
           br
-          | brach 삭제 등을 해야한다고요?
+          | branch 삭제 등을 해야한다고요?
         br
         p.bullet.red 네, 하지만 우리는 도구를 사용하는 동물!
 
@@ -807,12 +891,33 @@ html
           | 공식 Repository의 그 Branch에 Pull해주세요.
         img.w400.bullet(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/04/pageSections/07/contentFullWidth/0/content_files/file0/document/pull-request-7.png")
 
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Workflow를 위한 저장소 관리
+        ul
+          li Github
+          li Bitbucket
+          li Stash
+          li Gitlab
+          li Gitolite
+          li Gitorious
+          li tortoisegit
+          li ..
+
+
       section(data-bespoke-state='success success2')
         h2 준비된 내용은 여기까지!
         h3.white 
           a(href="http://learnbranch.urigit.com",target="_blank") 점검 실습
           |  or QnA
         p.gray 기타 : rebase, hook, .bash_profile ..
+        br
+        h4.white
+          | 본 자료는 
+          br
+          a.whitelink(href="http://yomybaby.github.io/gitlecture/") yomybaby.github.io/gitlecture
+          | 에서 확인 가능합니다.
+
       section(data-bespoke-state='success')
         h1 감사합니다.
 
@@ -829,6 +934,13 @@ html
           li
             i.fa-li.fa.fa-link
             a(href="http://git-scm.com/book/ko",target="_blank") Pro Git
+          li
+            i.fa-li.fa.fa-link
+            a(href="http://pismute.github.io/whygitisbetter/",target="_blank") Why Git is Better then X
+          li
+            i.fa-li.fa.fa-link
+            a(href="http://www.insightbook.co.kr/wp-content/uploads/2013/04/git-%EC%B9%98%ED%8A%B8%EC%8B%9C%ED%8A%B8%ED%94%84%EB%A6%B0%ED%8A%B8.pdf",target="_blank") Git 작업 흐름과 명령어 (Cheet Sheet)
+            
 
     // build:js scripts/scripts.js
     script(src='bower_components/bespoke.js/dist/bespoke.min.js')
