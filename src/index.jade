@@ -16,27 +16,19 @@ html
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
   body
     - var smallTitle ='';
-    section(data-bespoke-state='emphatic')
-        //- img(src="")
-        h2 추가 언급할만 한것
-        ul
-          li ammend
-          li HEAD
-          li stash
-          li tag와 branch 차이 : 커밋 발생시 해당 최신 커밋으로 이동 여부
-
     article#main-article
       section(data-bespoke-state='reveal')
-        span.small_title
-          i.fa.fa-warning
-          | 좌우키 혹은 스페이스키로 페이지 이동하세요.
+        //- span.small_title
+        //-   i.fa.fa-warning
+        //-   |  좌우키 혹은 스페이스키로 페이지 이동하세요.
         h1
           i.fa.fa-git
           |  제대로 써보기
         h3
           i.fa.fa-git
           |  이해와 활용
-        h5 rev.201406
+        h5 이종은
+        h5 rev.20140624
 
       section(data-bespoke-state='emphatic')
         //- img(src="")
@@ -50,9 +42,6 @@ html
           li
             i.fa-li.fa.fa-angle-right
             | Titanium Certified Expert & Titan
-          li
-            i.fa-li.fa.fa-angle-right
-            | NIPA 글로벌 오픈 프론티어
         ul.badge_list
           li
             img(src='tidev.png', class="badge")
@@ -591,16 +580,35 @@ html
           |  Reset
         p 브랜치까지 같이! Reset! Branch를 뒤바꾸는 일.
 
-
-
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
-        h2 방법 4. Clean
-        p Untracked File을 지움, .gitignore에 명시된 파일은 안지움
-        pre.dark
+        h2 기타 유용한 명령어
+        h3 
+          i.fa.fa-gift
+          |  Clean
+        pre.dark.small_font
           code.language-bash
             :markup
               git clean -f
+        p Untracked File을 지움, .gitignore에 명시된 파일은 안지움
+        
+        h3 
+          i.fa.fa-gift
+          |  --ammend
+        pre.dark.small_font
+          code.language-bash
+            :markup
+              git commit --ammend -m "You can change commit message"
+        p 방금 전 commit을 다시 하는 간단한 방법
+        
+        h3 
+          i.fa.fa-gift
+          |  Stash
+        pre.dark.small_font
+          code.language-bash
+            :markup
+              git stash
+        p Commit 되지 않은 변경사항을 따로 저장해두고 다음에 적용할 때
 
       - smallTitle="Git으로 가지치기(Branch)"
       section(data-bespoke-state='reveal',data-bespoke-hash="branch")
@@ -610,12 +618,13 @@ html
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
-        h3 Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻?
+        h3 Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻게?
         ul.fa-ul
           li.bullet
             | A. 프로젝트 
             i.fa.fa-folder-open-o
             |  폴더를 통째로 복사한다? (ex.myproject_원본)
+        h2.bullet 이제 수동작업은 그만!
         h3.bullet
           strong 빠르고 값싼 Branch는 Git 최고의 장점
 
@@ -654,7 +663,6 @@ html
             :markup
               git branch
               git branch <branch>
-              git branch <branch>
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -670,6 +678,13 @@ html
             :markup
               git checkout -b <branch>
               git checkout <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Branch와 비슷하지만 다른 것
+          ul
+            li HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가르킴)
+            li tag
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
