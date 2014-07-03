@@ -297,3 +297,8 @@ span.light {
 .txtLeft {
   text-align: left;
 }
+.fb-like {
+  margin-top: 5px;
+  width: 150px !important;
+  height: 20px !important;
+}

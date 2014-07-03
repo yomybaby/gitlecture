@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=294097790751111&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <article id="main-article">
-      <section data-bespoke-state="reveal"><span class="small_title"><i class="fa fa-warning"></i> 좌우키 혹은 스페이스키로 페이지 이동하세요.(모바일은 좌우 swipe)</span>
+      <section data-bespoke-state="reveal"><span class="small_title txt_L"><i class="fa fa-warning"></i> 좌우키 혹은 스페이스키로 페이지 이동하세요.(모바일은 좌우 swipe)<br></span>
         <h1><i class="fa fa-git"></i> 제대로 써보기</h1>
         <h3><i class="fa fa-git"></i> 이해와 활용</h3>
         <h5>이종은</h5>
-        <h5>rev.20140624</h5>
+        <h5>rev.20140704</h5><br>
       </section>
       <section data-bespoke-state="emphatic">
         <h2>이종은</h2>
@@ -331,12 +341,13 @@ git checkout &lt;branch&gt;
 </code></pre>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h2>Branch와 비슷하지만 다른 것
-          <ul>
-            <li>HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가르킴)</li>
-            <li>tag</li>
-          </ul>
-        </h2>
+        <h2>Branch와 비슷하지만 다른 것</h2>
+        <ul class="fa-ul">
+          <li><i class="fa fa-li fa-crosshairs"></i>HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가리킴)</li>
+          <li><i class="fa fa-li fa-tag"></i>tag : 특정 위치를 나타내는 포인트(commit을 가리킴)</li>
+        </ul><br>
+        <h3 class="bullet">비슷하지만..</h3>
+        <p class="bullet">HEAD가 branch를 가리키는 경우 commit이 발생하면<br>HEAD와 branch가 함께 새로운 commit으로 이동한다.</p>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
         <h2><i class="fa fa-code-fork fa-rotate-180"></i> Merge<br>이용한 Branch 다루기</h2>
@@ -477,6 +488,15 @@ git clone &lt;repo&gt; &lt;directory&gt;
       </section>
     </article>
     <script src="scripts/scripts.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-52540803-1', 'auto');
+      ga('send', 'pageview');
+    </script>
     <script>
       var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
       if(!is_chrome) alert('크롬 브라우져로 보시길 권장합니다.');
