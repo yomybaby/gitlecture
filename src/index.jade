@@ -15,12 +15,23 @@ html
     link(rel="stylesheet", href="bower_components/octicons/octicons/octicons.css")
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
   body
+    div(id="fb-root")
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=294097790751111&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     - var smallTitle ='';
     article#main-article
       section(data-bespoke-state='reveal')
-        //- span.small_title
-        //-   i.fa.fa-warning
-        //-   |  좌우키 혹은 스페이스키로 페이지 이동하세요.
+        span.small_title.txt_L
+          i.fa.fa-warning
+          |  좌우키 혹은 스페이스키로 페이지 이동하세요.(모바일은 좌우 swipe)
+          br
+          //- <div class="fb-like" data-href="http://yomybaby.github.io/gitlecture" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         h1
           i.fa.fa-git
           |  제대로 써보기
@@ -28,7 +39,9 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 rev.20140624
+        h5 rev.20140704
+        br
+        
 
       section(data-bespoke-state='emphatic')
         //- img(src="")
@@ -682,10 +695,18 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 Branch와 비슷하지만 다른 것
-          ul
-            li HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가르킴)
-            li tag
-
+        ul.fa-ul
+          li 
+            i.fa.fa-li.fa-crosshairs
+            | HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가리킴)
+          li
+            i.fa.fa-li.fa-tag
+            | tag : 특정 위치를 나타내는 포인트(commit을 가리킴)
+        br
+        h3.bullet 비슷하지만..
+        p.bullet HEAD가 branch를 가리키는 경우 commit이 발생하면
+          br
+          | HEAD와 branch가 함께 새로운 commit으로 이동한다.
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 
@@ -974,6 +995,14 @@ html
     script(src='bower_components/prism/prism.js')
     script(src='scripts/main.js')
     // endbuild
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-52540803-1', 'auto');
+      ga('send', 'pageview');
     script.
       var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
       if(!is_chrome) alert('크롬 브라우져로 보시길 권장합니다.');
