@@ -39,14 +39,14 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 rev.20140704
+        h5 rev.201407024
         br
         
 
       section(data-bespoke-state='emphatic')
         //- img(src="")
         h2 이종은
-        h3 인디 개발자 - Yo Studio
+        h3 Yo Studio
         br
         ui.fa-ul
           li
@@ -493,46 +493,6 @@ html
               git checkout <commit>
               git checkout <commit> <file>
         
-          //- li
-          //-   i.fa-li.fa.fa-backward
-          //-   | Branch를 체크아웃
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
-          i.fa.fa-backward
-          | &nbsp;
-          i.fa.fa-file-o
-          |  File을 Checkout
-        ul.fa-ul
-          li
-            i.fa-li.fa.fa-angle-right
-            strong 사용 상황 
-            | : 특정 파일을 해당 커밋 시점의 파일 모습으로 바꾸고 싶을 때
-          li.bullet
-            i.fa-li.fa.fa-angle-right
-            strong 일어나는 일
-            |  : 특정 파일을 특정 커밋의 상태로 되돌리고 파일을 stage에 올린다. (Modified 사라짐)
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
-          i.fa.fa-backward
-          | &nbsp;
-          i.fa.fa-camera-retro
-          |  Commit/Branch로 Checkout
-        ul.fa-ul
-          li
-            i.fa-li.fa.fa-angle-right
-            strong  사용 상황
-            |  : 모든 파일을 특정 커밋 시점의 모습으로 바꾸고 싶을 때
-          li.bullet
-            i.fa-li.fa.fa-angle-right
-            strong  일어나는 일
-            |  : 
-            br 
-            | 변경해야할 파일이 Modified 상태이면 Checkout이 진행이 되지 않고
-            br 
-            | 변경할 필요가 없는 파일은 Modifed 상태일 경우에는 Checkout이 진행되고 Modified는 유지된다.
-       
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -586,42 +546,43 @@ html
         h2 Checkout vs. Reset
         h3
           i.fa.fa-check
-          |  Checkout
-        p Branch는 안데려가요. HEAD만! Checkout! 다른 곳으로 이동할뿐
+            :markup
+              Checkout <commit>
+        p HEAD만 다른 곳으로 이동할뿐
         h3
           i.fa.fa-undo
-          |  Reset
-        p 브랜치까지 같이! Reset! Branch를 뒤바꾸는 일.
+            :markup
+              Reset <commit>
+        p Branch와 Head가 다른 곳으로 이동! Branch의 기록을 뒤바꾸는 일.
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 기타 유용한 명령어
-        h3 
-          i.fa.fa-gift
-          |  Clean
         pre.dark.small_font
           code.language-bash
             :markup
               git clean -f
-        p Untracked File을 지움, .gitignore에 명시된 파일은 안지움
-        
-        h3 
+        p 
           i.fa.fa-gift
-          |  --ammend
+          strong  clean
+          | : Untracked File을 지움, .gitignore에 명시된 파일은 안지움
+        br
         pre.dark.small_font
-          code.language-bash
-            :markup
-              git commit --ammend -m "You can change commit message"
-        p 방금 전 commit을 다시 하는 간단한 방법
-        
-        h3 
-          i.fa.fa-gift
-          |  Stash
+          code.language-bash.
+            git commit <strong>--ammend</strong> -m "You can change commit message"
+        p 
+          i.fa.fa-gift 
+          strong  ammend
+          | : 방금 전 commit을 다시 하는 간단한 방법
+        br
         pre.dark.small_font
           code.language-bash
             :markup
               git stash
-        p Commit 되지 않은 변경사항을 따로 저장해두고 다음에 적용할 때
+        p 
+          i.fa.fa-gift 
+          strong  stash
+          | : Commit 되지 않은 변경사항을 따로 저장해두고 다음에 적용할 때
 
       - smallTitle="Git으로 가지치기(Branch)"
       section(data-bespoke-state='reveal',data-bespoke-hash="branch")
@@ -661,10 +622,6 @@ html
             | 용량 : 41 Byte
             
         h3.bullet 단순 포인터!
-
-      section(data-bespoke-state='branch')
-        span.small_title.bullet= smallTitle
-        h2 이리로 가도 되고, 저리로 가도 되고
       
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -704,7 +661,7 @@ html
             | tag : 특정 위치를 나타내는 포인트(commit을 가리킴)
         br
         h3.bullet 비슷하지만..
-        p.bullet HEAD가 branch를 가리키는 경우 commit이 발생하면
+        p.bullet branch에 Checkout된 상태에서 commit이 발생하면
           br
           | HEAD와 branch가 함께 새로운 commit으로 이동한다.
       section(data-bespoke-state='emphatic')
