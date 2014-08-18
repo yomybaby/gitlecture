@@ -39,7 +39,7 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 rev.201407024
+        h5 rev.20140818
         br
         
 
@@ -51,10 +51,32 @@ html
         ui.fa-ul
           li
             i.fa-li.fa.fa-angle-right
+            | Web & App 컨설팅 / 교육 / 제작
+          li
+            i.fa-li.fa.fa-angle-right
+            | Javascript 중독자 : node.js, backbone.js, titanium..
+        p
+          i.fa.fa-twitter
+          a(href="https://twitter.com/yomybaby")  @yomybaby
+          br
+          i.fa.fa-github
+          a(href="https://github.com/yomybaby")  yomybaby
+
+      section(data-bespoke-state='emphatic')
+        //- img(src="")
+        h2 이종은
+        h3 Titanium Developer
+        br
+        ui.fa-ul
+          li
+            i.fa-li.fa.fa-angle-right
             | 한국 Titanium 개발자 모임 tidev.kr 운영
           li
             i.fa-li.fa.fa-angle-right
             | Titanium Certified Expert & Titan
+          li 
+            i.fa-li.fa.fa-angle-right
+            | NIPA 글로벌 오픈 프론티어 : Titanium 프로젝트
         ul.badge_list
           li
             img(src='tidev.png', class="badge")
@@ -62,12 +84,6 @@ html
             img(src='tced.png', class="badge")
             &nbsp;
             img(src='titans.png', class="badge")
-        p
-          i.fa.fa-twitter
-          a(href="https://twitter.com/yomybaby")  @yomybaby
-          br
-          i.fa.fa-github
-          a(href="https://github.com/yomybaby")  yomybaby
 
       section(data-bespoke-state='stair')
         span.small_title 목차
@@ -92,13 +108,13 @@ html
             a.whitelink(href="#doGit")
               | 기록하기
           li
-            i.fa-li.fa.fa-backward
-            a.whitelink(href="#undo")
-              | 되돌리기
-          li
             i.fa-li.fa.fa-code-fork
             a.whitelink(href="#branch")
               | 가지치기(Branch)
+          li
+            i.fa-li.fa.fa-backward
+            a.whitelink(href="#undo")
+              | 되돌리기
           li
             i.fa-li.fa.fa-cloud-upload
             a.whitelink(href="#remote")
@@ -326,6 +342,18 @@ html
           br
           | 알고 있다.
 
+      - smallTitle="Git 주요 개념 맛보기"
+      section(data-bespoke-state='reveal',data-bespoke-hash="examGit")
+        h1
+          i.fa.fa-cutlery.fa-3x
+        h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2 
+          i.fa.fa-refresh
+          |  역지사지
+        p git의 만드는 토발즈의 마음이 되어..
       
       - smallTitle="Git으로 기록하기"
       section(data-bespoke-state='reveal',data-bespoke-hash="doGit")
@@ -475,7 +503,124 @@ html
           li.bullet
             i.fa-li.fa.fa-file-text-o
             | Modified
-          
+      
+      - smallTitle="Git으로 가지치기(Branch)"
+      section(data-bespoke-state='reveal',data-bespoke-hash="branch")
+        h1
+          i.fa.fa-code-fork.fa-3x
+        h3= smallTitle
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h3 Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻게?
+        ul.fa-ul
+          li.bullet
+            | A. 프로젝트 
+            i.fa.fa-folder-open-o
+            |  폴더를 통째로 복사한다? (ex.myproject_원본)
+        h2.bullet 이제 수동작업은 그만!
+        h3.bullet
+          strong 
+            span.red 빠르고 값싼 Branch
+            | 는 Git 최고의 장점
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-code-fork
+          |  Branch의 실체 공개!
+        ul.fa-ul
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 파일 1개로 구성
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 파일명 == Branch 명
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 내용 : 가리키는 커밋의 Hash
+          li.bullet
+            i.fa-li.fa.fa-file-text-o
+            | 용량 : 41 Byte
+            
+        h3.bullet 단순 포인터! 겁나 싸죠?
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-code-fork
+          |  Branch 명령어 사용법
+        pre.dark
+          code.language-bash
+            :markup
+              git branch
+              git branch <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-check-circle-o 
+          |  Checkout 명령어를
+          br
+          | 이용한 
+          i.fa.fa-code-fork
+          |  Branch 다루기
+        pre.dark
+          code.language-bash
+            :markup
+              git checkout -b <branch>
+              git checkout <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 Branch와 비슷하지만 다른 것
+        ul.fa-ul
+          li
+            i.fa.fa-li.fa-tag
+            | tag : 특정 위치를 나타내는 포인트(commit을 가리킴)
+          li 
+            i.fa.fa-li.fa-crosshairs
+            | HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가리킴)
+        br
+        h3.bullet 성격 정리..
+        ul.fa-ul.small_title.bullet
+          li
+            i.fa.fa-li.fa-tag
+            | tag : 고정
+          li 
+            i.fa.fa-li.fa-code-fork
+            | branch : 반고정
+          li
+            i.fa.fa-li.fa-crosshairs
+            | HEAD : 고정 아님
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-code-fork.fa-rotate-180
+          |  Merge
+          br
+          | 이용한 Branch 다루기
+        pre.dark
+          code.language-bash
+            :markup
+              git merge <branch>
+              git merge --no-ff <branch>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 
+          i.fa.fa-code-fork.fa-rotate-180
+          |  Merge의 종류 1.
+        h2 Fast-Forward Merge
+        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png")
+      
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 
+          i.fa.fa-code-fork.fa-rotate-180
+          |  Merge의 종류 2.
+        h2 3-way merge
+        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png")    
 
       - smallTitle="Git으로 되돌리기"
       section(data-bespoke-state='reveal',data-bespoke-hash="undo")
@@ -584,115 +729,7 @@ html
           strong  stash
           | : Commit 되지 않은 변경사항을 따로 저장해두고 다음에 적용할 때
 
-      - smallTitle="Git으로 가지치기(Branch)"
-      section(data-bespoke-state='reveal',data-bespoke-hash="branch")
-        h1
-          i.fa.fa-code-fork.fa-3x
-        h3= smallTitle
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h3 Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻게?
-        ul.fa-ul
-          li.bullet
-            | A. 프로젝트 
-            i.fa.fa-folder-open-o
-            |  폴더를 통째로 복사한다? (ex.myproject_원본)
-        h2.bullet 이제 수동작업은 그만!
-        h3.bullet
-          strong 빠르고 값싼 Branch는 Git 최고의 장점
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
-          i.fa.fa-code-fork
-          |  Branch의 실체 공개!
-        ul.fa-ul
-          li.bullet
-            i.fa-li.fa.fa-file-text-o
-            | 파일 1개로 구성
-          li.bullet
-            i.fa-li.fa.fa-file-text-o
-            | 파일명 == Branch 명
-          li.bullet
-            i.fa-li.fa.fa-file-text-o
-            | 내용 : 가리키는 커밋의 Hash
-          li.bullet
-            i.fa-li.fa.fa-file-text-o
-            | 용량 : 41 Byte
-            
-        h3.bullet 단순 포인터!
       
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
-          i.fa.fa-code-fork
-          |  Branch 명령어 사용법
-        pre.dark
-          code.language-bash
-            :markup
-              git branch
-              git branch <branch>
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
-          i.fa.fa-check-circle-o 
-          |  Checkout 명령어를
-          br
-          | 이용한 
-          i.fa.fa-code-fork
-          |  Branch 다루기
-        pre.dark
-          code.language-bash
-            :markup
-              git checkout -b <branch>
-              git checkout <branch>
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 Branch와 비슷하지만 다른 것
-        ul.fa-ul
-          li 
-            i.fa.fa-li.fa-crosshairs
-            | HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가리킴)
-          li
-            i.fa.fa-li.fa-tag
-            | tag : 특정 위치를 나타내는 포인트(commit을 가리킴)
-        br
-        h3.bullet 비슷하지만..
-        p.bullet branch에 Checkout된 상태에서 commit이 발생하면
-          br
-          | HEAD와 branch가 함께 새로운 commit으로 이동한다.
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
-          i.fa.fa-code-fork.fa-rotate-180
-          |  Merge
-          br
-          | 이용한 Branch 다루기
-        pre.dark
-          code.language-bash
-            :markup
-              git merge <branch>
-              git merge --no-ff <branch>
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h4 
-          i.fa.fa-code-fork.fa-rotate-180
-          |  Merge의 종류 1.
-        h2 Fast-Forward Merge
-        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png")
-      
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h4 
-          i.fa.fa-code-fork.fa-rotate-180
-          |  Merge의 종류 2.
-        h2 3-way merge
-        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png")
-
       - smallTitle="Git 원격 저장소"
       section(data-bespoke-state='reveal',data-bespoke-hash="remote")
         h1
@@ -834,8 +871,11 @@ html
         h4 
           i.fa.fa-group
           |  개발서버(develop), 실서버(master) 구분할께요.
-        h2 
-          | Gitflow Workflow
+        h2 Gitflow Workflow
+        p
+          a(href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html",target="_blank") 한글설명
+          | , &nbsp;
+          a(href="https://www.atlassian.com/git/workflows#!workflow-gitflow",target="_blank") Atlassian 설명
         a(href="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png",target="_blank")
           img.w300(src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png")
 
