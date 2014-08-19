@@ -129,8 +129,7 @@ html
         h2 당신은 누구십니까?^^
         ul 
           li 어떤 일을 하시는 개발자?
-          li Git을 어떻게 사용하고 계신가요?
-          li 어떤 Workflow(Branch 전략)을 사용하시나요?
+          li Git을 어떻게(Workflow/Branch전략) 사용하고 계신가요?
           li 
             i.fa.fa-desktop
             |  컴퓨터로 업무보시죠?
@@ -276,12 +275,12 @@ html
         span.small_title= smallTitle
         h2 설마?
         h3  git 그리고 github
-        p
+        p.bullet
           i.fa.fa-git.fa-5x
-          span.fa-stack.fa-5x.bullet(style="margin-top:-15%")
+          span.fa-stack.fa-5x(style="margin-top:-15%")
             | ==
-            i.fa.fa-ban.fa-stack-2x.red.bullet
           i.fa.fa-github.fa-5x
+        i.fa.fa-ban.fa-stack.fa-5x.red.bullet(style="position:absolute;top:0;font-size:290px;top:-30px;")
       
       section(data-bespoke-state='whatisthis')
         span.small_title= smallTitle
@@ -637,7 +636,6 @@ html
             :markup
               git checkout <commit>
               git checkout <commit> <file>
-        
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -752,7 +750,7 @@ html
         h2 
           i.fa.fa-cloud-upload.fa-2x
           br
-          | Remote를 만들어서 Push해보자
+          | Remote 관련 명령어
         pre.dark
           code.language-bash
             :markup
@@ -761,13 +759,40 @@ html
               git remote add <name> <url>
               git remote rm <name>
               git remote rename <old-name> <new-name>
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2 
+          i.fa.fa-cloud-upload.fa-2x
+          br
+          | Github Rmote Push 데모
+        br
+        pre.dark
+          code.language-bash
+            :markup
+              git init
+              git add README.md
+              git commit -m "first commit"
+              git remote add origin git@github.com:yomybaby/test.git
+              git push -u origin master
+        pre.dark
+          code.language-bash
+            :markup
+              git remote add origin git@github.com:yomybaby/test.git
+              git push -u origin master
       
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h4 
           i.fa.fa-star.red
           |  그 특별한 remote 이름
-        h2 origin
+        h2.bullet origin
+        br
+        h4.bullet
+          i.fa.fa-code-fork
+          |  Branch에서 master의 역할과 같이 
+          strong.red 기본(기준)
+          | 이 되는 것
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
