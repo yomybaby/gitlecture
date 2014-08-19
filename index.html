@@ -24,19 +24,28 @@
         <h1><i class="fa fa-git"></i> 제대로 써보기</h1>
         <h3><i class="fa fa-git"></i> 이해와 활용</h3>
         <h5>이종은</h5>
-        <h5>rev.201407024</h5><br>
+        <h5>rev.20140818</h5><br>
       </section>
       <section data-bespoke-state="emphatic">
         <h2>이종은</h2>
         <h3>Yo Studio</h3><br>
         <ui class="fa-ul">
+          <li><i class="fa-li fa fa-angle-right"></i>Web & App 컨설팅 / 교육 / 제작</li>
+          <li><i class="fa-li fa fa-angle-right"></i>Javascript 중독자 : node.js, backbone.js, titanium..</li>
+        </ui>
+        <p><i class="fa fa-twitter"></i><a href="https://twitter.com/yomybaby"> @yomybaby</a><br><i class="fa fa-github"></i><a href="https://github.com/yomybaby"> yomybaby</a></p>
+      </section>
+      <section data-bespoke-state="emphatic">
+        <h2>이종은</h2>
+        <h3>Titanium Developer</h3><br>
+        <ui class="fa-ul">
           <li><i class="fa-li fa fa-angle-right"></i>한국 Titanium 개발자 모임 tidev.kr 운영</li>
           <li><i class="fa-li fa fa-angle-right"></i>Titanium Certified Expert & Titan</li>
+          <li><i class="fa-li fa fa-angle-right"></i>NIPA 글로벌 오픈 프론티어 : Titanium 프로젝트</li>
         </ui>
         <ul class="badge_list">
           <li><img src="tidev.png" class="badge">&nbsp;<img src="tced.png" class="badge">&nbsp;<img src="titans.png" class="badge"></li>
         </ul>
-        <p><i class="fa fa-twitter"></i><a href="https://twitter.com/yomybaby"> @yomybaby</a><br><i class="fa fa-github"></i><a href="https://github.com/yomybaby"> yomybaby</a></p>
       </section>
       <section data-bespoke-state="stair"><span class="small_title">목차</span>
         <h2>목차
@@ -46,8 +55,8 @@
           <li><i class="fa-li fa fa-wrench"></i><a href="#toolHistory" class="whitelink">파일 관리 도구의 탄생</a></li>
           <li><i class="fa-li fa fa-git-square"></i><a href="#gitOverview" class="whitelink">바로 알기</a></li>
           <li><i class="fa-li fa fa-camera-retro"></i><a href="#doGit" class="whitelink">기록하기</a></li>
-          <li><i class="fa-li fa fa-backward"></i><a href="#undo" class="whitelink">되돌리기</a></li>
           <li><i class="fa-li fa fa-code-fork"></i><a href="#branch" class="whitelink">가지치기(Branch)</a></li>
+          <li><i class="fa-li fa fa-backward"></i><a href="#undo" class="whitelink">되돌리기</a></li>
           <li><i class="fa-li fa fa-cloud-upload"></i><a href="#remote" class="whitelink">원격 저장소</a></li>
           <li><i class="fa-li fa fa-group"></i><a href="#workflow" class="whitelink">Workflow</a></li>
         </ui>
@@ -56,8 +65,7 @@
         <h2>당신은 누구십니까?^^</h2>
         <ul>
           <li>어떤 일을 하시는 개발자?</li>
-          <li>Git을 어떻게 사용하고 계신가요?</li>
-          <li>어떤 Workflow(Branch 전략)을 사용하시나요?</li>
+          <li>Git을 어떻게(Workflow/Branch전략) 사용하고 계신가요?</li>
           <li><i class="fa fa-desktop"></i> 컴퓨터로 업무보시죠?</li>
         </ul>
       </section>
@@ -135,7 +143,7 @@
       <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
         <h2>설마?</h2>
         <h3> git 그리고 github</h3>
-        <p><i class="fa fa-git fa-5x"></i><span style="margin-top:-15%" class="fa-stack fa-5x bullet">==<i class="fa fa-ban fa-stack-2x red bullet"></i></span><i class="fa fa-github fa-5x"></i></p>
+        <p class="bullet"><i class="fa fa-git fa-5x"></i><span style="margin-top:-15%" class="fa-stack fa-5x">==</span><i class="fa fa-github fa-5x"></i></p><i style="position:absolute;top:0;font-size:290px;top:-30px;" class="fa fa-ban fa-stack fa-5x red bullet"></i>
       </section>
       <section data-bespoke-state="whatisthis"><span class="small_title">Git 바로 알기</span>
         <h2>앞으로 쏟아질 용어들</h2><br><br><br>
@@ -169,6 +177,14 @@
         <h1><i class="fa fa-eye fa-2x"></i></h1>
         <h4>빠르고 안전하고 자유로운 이유 3.</h4>
         <h2><i class="fa fa-git"></i>은 당신이 한 <span class="light">거의</span> 모든 일을<br>알고 있다.</h2>
+      </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="examGit">
+        <h1><i class="fa fa-cutlery fa-3x"></i></h1>
+        <h3>Git 주요 개념 맛보기</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title">Git 주요 개념 맛보기</span>
+        <h2><i class="fa fa-refresh"></i> 역지사지</h2>
+        <p>git의 만드는 토발즈의 마음이 되어..</p>
       </section>
       <section data-bespoke-state="reveal" data-bespoke-hash="doGit">
         <h1><i class="fa fa-camera-retro fa-3x"></i></h1>
@@ -237,6 +253,67 @@ git reflog
           <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>Modified</li>
         </ul>
       </section>
+      <section data-bespoke-state="reveal" data-bespoke-hash="branch">
+        <h1><i class="fa fa-code-fork fa-3x"></i></h1>
+        <h3>Git으로 가지치기(Branch)</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h3>Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻게?</h3>
+        <ul class="fa-ul">
+          <li class="bullet">A. 프로젝트 <i class="fa fa-folder-open-o"></i> 폴더를 통째로 복사한다? (ex.myproject_원본)</li>
+        </ul>
+        <h2 class="bullet">이제 수동작업은 그만!</h2>
+        <h3 class="bullet"><strong><span class="red">빠르고 값싼 Branch</span>는 Git 최고의 장점</strong></h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-code-fork"></i> Branch의 실체 공개!</h2>
+        <ul class="fa-ul">
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>파일 1개로 구성</li>
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>파일명 == Branch 명</li>
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>내용 : 가리키는 커밋의 Hash</li>
+          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>용량 : 41 Byte</li>
+        </ul>
+        <h3 class="bullet">단순 포인터! 겁나 싸죠?</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-code-fork"></i> Branch 명령어 사용법</h2>
+        <pre class="dark"><code class="language-bash">git branch
+git branch &lt;branch&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-check-circle-o"></i> Checkout 명령어를<br>이용한 <i class="fa fa-code-fork"></i> Branch 다루기</h2>
+        <pre class="dark"><code class="language-bash">git checkout -b &lt;branch&gt;
+git checkout &lt;branch&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2>Branch와 비슷하지만 다른 것</h2>
+        <ul class="fa-ul">
+          <li><i class="fa fa-li fa-tag"></i>tag : 특정 위치를 나타내는 포인트(commit을 가리킴)</li>
+          <li><i class="fa fa-li fa-crosshairs"></i>HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가리킴)</li>
+        </ul><br>
+        <h3 class="bullet">성격 정리..</h3>
+        <ul class="fa-ul small_title bullet">
+          <li><i class="fa fa-li fa-tag"></i>tag : 고정</li>
+          <li><i class="fa fa-li fa-code-fork"></i>branch : 반고정</li>
+          <li><i class="fa fa-li fa-crosshairs"></i>HEAD : 고정 아님</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h2><i class="fa fa-code-fork fa-rotate-180"></i> Merge<br>이용한 Branch 다루기</h2>
+        <pre class="dark"><code class="language-bash">git merge &lt;branch&gt;
+git merge --no-ff &lt;branch&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 1.</h4>
+        <h2>Fast-Forward Merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png" class="w200">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
+        <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 2.</h4>
+        <h2>3-way merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png" class="w200">
+      </section>
       <section data-bespoke-state="reveal" data-bespoke-hash="undo">
         <h1><i class="fa fa-backward fa-3x"></i></h1>
         <h3>Git으로 되돌리기</h3>
@@ -246,7 +323,6 @@ git reflog
         <p>전체 혹은 특정파일을 특정 커밋의 상태로 되돌린다.</p>
         <pre class="dark"><code class="language-bash">git checkout &lt;commit&gt;
 git checkout &lt;commit&gt; &lt;file&gt;
-
 </code></pre>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
@@ -287,63 +363,6 @@ git reset &lt;commit&gt;
         <pre class="dark small_font"><code class="language-bash">git stash</code></pre>
         <p><i class="fa fa-gift"></i><strong> stash</strong>: Commit 되지 않은 변경사항을 따로 저장해두고 다음에 적용할 때</p>
       </section>
-      <section data-bespoke-state="reveal" data-bespoke-hash="branch">
-        <h1><i class="fa fa-code-fork fa-3x"></i></h1>
-        <h3>Git으로 가지치기(Branch)</h3>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h3>Q. 원래 코드와 상관없이 개발을 진행하고 싶을 때 어떻게?</h3>
-        <ul class="fa-ul">
-          <li class="bullet">A. 프로젝트 <i class="fa fa-folder-open-o"></i> 폴더를 통째로 복사한다? (ex.myproject_원본)</li>
-        </ul>
-        <h2 class="bullet">이제 수동작업은 그만!</h2>
-        <h3 class="bullet"><strong>빠르고 값싼 Branch는 Git 최고의 장점</strong></h3>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h2><i class="fa fa-code-fork"></i> Branch의 실체 공개!</h2>
-        <ul class="fa-ul">
-          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>파일 1개로 구성</li>
-          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>파일명 == Branch 명</li>
-          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>내용 : 가리키는 커밋의 Hash</li>
-          <li class="bullet"><i class="fa-li fa fa-file-text-o"></i>용량 : 41 Byte</li>
-        </ul>
-        <h3 class="bullet">단순 포인터!</h3>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h2><i class="fa fa-code-fork"></i> Branch 명령어 사용법</h2>
-        <pre class="dark"><code class="language-bash">git branch
-git branch &lt;branch&gt;
-</code></pre>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h2><i class="fa fa-check-circle-o"></i> Checkout 명령어를<br>이용한 <i class="fa fa-code-fork"></i> Branch 다루기</h2>
-        <pre class="dark"><code class="language-bash">git checkout -b &lt;branch&gt;
-git checkout &lt;branch&gt;
-</code></pre>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h2>Branch와 비슷하지만 다른 것</h2>
-        <ul class="fa-ul">
-          <li><i class="fa fa-li fa-crosshairs"></i>HEAD : 현재 위치를 나타내는 포인트(branch나 commit을 가리킴)</li>
-          <li><i class="fa fa-li fa-tag"></i>tag : 특정 위치를 나타내는 포인트(commit을 가리킴)</li>
-        </ul><br>
-        <h3 class="bullet">비슷하지만..</h3>
-        <p class="bullet">branch에 Checkout된 상태에서 commit이 발생하면<br>HEAD와 branch가 함께 새로운 commit으로 이동한다.</p>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h2><i class="fa fa-code-fork fa-rotate-180"></i> Merge<br>이용한 Branch 다루기</h2>
-        <pre class="dark"><code class="language-bash">git merge &lt;branch&gt;
-git merge --no-ff &lt;branch&gt;
-</code></pre>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 1.</h4>
-        <h2>Fast-Forward Merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png" class="w200">
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
-        <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 2.</h4>
-        <h2>3-way merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png" class="w200">
-      </section>
       <section data-bespoke-state="reveal" data-bespoke-hash="remote">
         <h1><i class="fa fa-cloud-upload fa-3x"></i></h1>
         <h3>Git 원격 저장소</h3>
@@ -354,7 +373,7 @@ git merge --no-ff &lt;branch&gt;
         <h3 class="bullet"><i class="fa fa-bitbucket fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-github-alt fa-2x"></i></h3>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
-        <h2><i class="fa fa-cloud-upload fa-2x"></i><br>Remote를 만들어서 Push해보자</h2>
+        <h2><i class="fa fa-cloud-upload fa-2x"></i><br>Remote 관련 명령어</h2>
         <pre class="dark"><code class="language-bash">git remote
 git remote -v
 git remote add &lt;name&gt; &lt;url&gt;
@@ -363,8 +382,20 @@ git remote rename &lt;old-name&gt; &lt;new-name&gt;
 </code></pre>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
+        <h2><i class="fa fa-cloud-upload fa-2x"></i><br>Github Rmote Push 데모</h2><br>
+        <pre class="dark"><code class="language-bash">git init
+git add README.md
+git commit -m &quot;first commit&quot;
+git remote add origin git@github.com:yomybaby/test.git
+git push -u origin master</code></pre>
+        <pre class="dark"><code class="language-bash">git remote add origin git@github.com:yomybaby/test.git
+git push -u origin master
+</code></pre>
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
         <h4><i class="fa fa-star red"></i> 그 특별한 remote 이름</h4>
-        <h2>origin</h2>
+        <h2 class="bullet">origin</h2><br>
+        <h4 class="bullet"><i class="fa fa-code-fork"></i> Branch에서 master의 역할과 같이 <strong class="red">기본(기준)</strong>이 되는 것</h4>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git 원격 저장소</span>
         <h2><i class="fa fa-cloud-download fa-2x"></i><br>Fetch vs. Pull</h2>
@@ -417,7 +448,8 @@ git clone &lt;repo&gt; &lt;directory&gt;
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Gitflow Workflow</span>
         <h4><i class="fa fa-group"></i> 개발서버(develop), 실서버(master) 구분할께요.</h4>
-        <h2>Gitflow Workflow</h2><a href="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" target="_blank"><img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" class="w300"></a>
+        <h2>Gitflow Workflow</h2>
+        <p><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html" target="_blank">한글설명</a>, &nbsp;<a href="https://www.atlassian.com/git/workflows#!workflow-gitflow" target="_blank">Atlassian 설명</a></p><a href="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" target="_blank"><img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" class="w300"></a>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Gitflow Workflow</span>
         <h4><i class="fa fa-group"></i> 개발서버(develop), 실서버(master) 구분할께요.</h4>
