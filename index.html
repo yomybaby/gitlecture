@@ -20,20 +20,24 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <article id="main-article">
-      <section data-bespoke-state="reveal"><span class="small_title txt_L"><i class="fa fa-warning"></i> 좌우키 혹은 스페이스키로 페이지 이동하세요.(모바일은 좌우 swipe)<br></span>
+      <section data-bespoke-state="reveal"><span class="small_title txt_L"><br><div class="fb-like" data-href="http://yomybaby.github.io/gitlecture" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></span>
         <h1><i class="fa fa-git"></i> 제대로 써보기</h1>
         <h3><i class="fa fa-git"></i> 이해와 활용</h3>
         <h5>이종은</h5>
-        <h5>rev.20140818</h5><br>
+        <h5>rev.20140922</h5><br>
       </section>
       <section data-bespoke-state="emphatic">
         <h2>이종은</h2>
-        <h3>Yo Studio</h3><br>
+        <h3>Yo Studio</h3>
         <ui class="fa-ul">
           <li><i class="fa-li fa fa-angle-right"></i>Web & App 컨설팅 / 교육 / 제작</li>
-          <li><i class="fa-li fa fa-angle-right"></i>Javascript 중독자 : node.js, backbone.js, titanium..</li>
+          <li><i class="fa-li fa fa-angle-right"></i>Javascript 중독자 : titanium, backbone.js, node.js..</li>
         </ui>
-        <p><i class="fa fa-twitter"></i><a href="https://twitter.com/yomybaby"> @yomybaby</a><br><i class="fa fa-github"></i><a href="https://github.com/yomybaby"> yomybaby</a></p>
+        <ul>
+          <li><i class="fa fa-envelope"></i><a href="mailto:jong@yostudio.kr"> jong@yostudio.kr</a></li>
+          <li><i class="fa fa-twitter"></i><a href="https://twitter.com/yomybaby"> @yomybaby</a></li>
+          <li><i class="fa fa-github"></i><a href="https://github.com/yomybaby"> yomybaby</a></li>
+        </ul>
       </section>
       <section data-bespoke-state="emphatic">
         <h2>이종은</h2>
@@ -171,7 +175,7 @@
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
         <h4>빠르고 안전하고 자유로운 이유 2.</h4>
-        <h2>분산버전 관리 시스템</h2><img src="https://www.atlassian.com/git/migration/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file0/document/git-migration-centralized-vs-distributed.png" class="w400">
+        <h2>분산버전 관리 시스템</h2><img src="./images/cent_dist.svg" class="w400">
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title">Git 바로 알기</span>
         <h1><i class="fa fa-eye fa-2x"></i></h1>
@@ -308,11 +312,11 @@ git merge --no-ff &lt;branch&gt;
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
         <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 1.</h4>
-        <h2>Fast-Forward Merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png" class="w200">
+        <h2>Fast-Forward Merge</h2><img src="./images/07.svg">
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 가지치기(Branch)</span>
         <h4><i class="fa fa-code-fork fa-rotate-180"></i> Merge의 종류 2.</h4>
-        <h2>3-way merge</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png" class="w200">
+        <h2>3-way merge</h2><img src="./images/08.svg" class="w800">
       </section>
       <section data-bespoke-state="reveal" data-bespoke-hash="undo">
         <h1><i class="fa fa-backward fa-3x"></i></h1>
@@ -345,7 +349,7 @@ git reset &lt;commit&gt;
 </code></pre>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
-        <h2>Revert vs. Reset</h2><img src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/undoing-changes/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_revert-vs-reset.png" class="w200">
+        <h2>Revert vs. Reset</h2><img src="./images/revert_vs_reset.svg">
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git으로 되돌리기</span>
         <h2>Checkout vs. Reset</h2>
@@ -432,19 +436,19 @@ git clone &lt;repo&gt; &lt;directory&gt;
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Centralized Workflow</span>
         <h4><i class="fa fa-group"></i> Branch 하나만 쓸께요.</h4>
         <h2>Centralized Workflow</h2>
-        <div><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file1/document/git-workflow-svn-push-local.png" class="w150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file2/document/git-workflow-svn-managingconflicts.png" class="w200 bullet"></div>
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Centralized Workflow</span>
-        <h4><i class="fa fa-group"></i> Branch 하나만 쓸께요.</h4>
-        <h2>Centralized Workflow</h2><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/05/contentFullWidth/00/content_files/file1/document/git-workflow-svn-6.png" class="w300">
-      </section>
-      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Centralized Workflow</span>
-        <h4><i class="fa fa-group"></i> 개발 단위(기능) 별로 branch 만들께요.</h4>
-        <h2>Feature Branch Workflow</h2><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png" class="w300">
+        <div><img src="./images/11.svg"></div>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Feature Branch Workflow</span>
-        <h4><i class="fa fa-group"></i> Feature Branch Workflow : master는 항상 무결점!</h4>
-        <h2>그럼 섞어서 확인은 어디서??</h2><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png" class="w300">
+        <h4><i class="fa fa-group"></i> 개발 단위(기능) 별로 branch 만들께요.</h4>
+        <h2>Feature Branch Workflow</h2><img src="./images/featured.svg">
+      </section>
+      <section data-bespoke-state="emphatic" style="transition:none !important"><span class="small_title bullet">Git Workflow - Feature Branch Workflow</span>
+        <h4><i class="fa fa-group"></i> 개발 단위(기능) 별로 branch 만들께요.</h4>
+        <h2>Feature Branch Workflow</h2><img src="./images/featured-1.svg">
+      </section>
+      <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Feature Branch Workflow</span>
+        <h4><i class="fa fa-group"></i> Feature Branch Workflow. 심플하고 자유롭다.</h4>
+        <h2 class="bullet">너무 자유로워서 관리의 어려움</h2><img src="./images/toomanyfeatured.svg" class="bullet">
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Gitflow Workflow</span>
         <h4><i class="fa fa-group"></i> 개발서버(develop), 실서버(master) 구분할께요.</h4>
@@ -459,13 +463,13 @@ git clone &lt;repo&gt; &lt;directory&gt;
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Forking Workflow</span>
         <h4><i class="fa fa-group"></i> Remote Repository도 각각 따로 둘께요. 공식 Repository는 관리자만!</h4>
-        <h2>Forking Workflow</h2><br><i class="fa fa-star fa-2x blue"></i><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file/git-workflows-forking.png" class="w300">
-        <p><span class="green">개발자1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">관리자</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="puple">개발자2</span></p>
+        <h2>Forking Workflow</h2><br><i class="fa fa-star fa-2x blue"></i><img src="./images/fork.svg" class="w300">
+        <p><span class="puple">개발자1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>관리자</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">개발자2</span></p>
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow - Forking Workflow</span>
         <h4><i class="fa fa-group"></i> 개발자1, 개발자2가 완료했다는 것을 관리자에게 어떻게 말해주지?</h4>
         <h2 class="bullet"><i class="fa fa-github"> </i><i class="fa fa-bitbucket"> </i> Pull Request</h2>
-        <p class="bullet">내 Repository의 이 Branch를<br>공식 Repository의 그 Branch에 Pull해주세요.</p><img src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/04/pageSections/07/contentFullWidth/0/content_files/file0/document/pull-request-7.png" class="w400 bullet">
+        <p class="bullet">내 Repository의 이 Branch를<br>공식 Repository의 그 Branch에 Pull해주세요.</p><img src="https://www.atlassian.com/git/images/tutorials/collaborating/making-a-pull-request/pull-request-7.png" class="w400 bullet">
       </section>
       <section data-bespoke-state="emphatic"><span class="small_title bullet">Git Workflow</span>
         <h2>Workflow를 위한 저장소 관리</h2>
@@ -480,14 +484,15 @@ git clone &lt;repo&gt; &lt;directory&gt;
           <li>..</li>
         </ul>
       </section>
-      <section data-bespoke-state="success success2">
-        <h2>준비된 내용은 여기까지!</h2>
-        <h3 class="white"><a href="http://learnbranch.urigit.com" target="_blank">점검 실습</a> or QnA</h3>
-        <p class="gray">기타 : rebase, hook, .bash_profile ..</p><br>
-        <h4 class="white">본 자료는 <br><a href="http://yomybaby.github.io/gitlecture/" class="whitelink">yomybaby.github.io/gitlecture</a>에서 확인 가능합니다.</h4>
+      <section data-bespoke-state="reveal" data-bespoke-hash="wrapup">
+        <h3>마무리!</h3>
+        <h2 class="white"><i class="fa fa-heart red"></i> Commit과 Branch의 이해</h2><br>
+        <p class="white">미처 다루지 못한 내용 : rebase, hook, .bash_profile ..</p>
       </section>
-      <section data-bespoke-state="success">
+      <section data-bespoke-state="success success2">
         <h1>감사합니다.</h1>
+        <h2 class="white"><a href="http://class.yostudio.kr" target="_blank" class="white">class.yostudio.kr</a></h2><br>
+        <h4 class="white">강의 후에도 강의 관련 질문 및 요청사항은 <a href="http://class.yostudio.kr" target="_blank">class.yostudio.kr</a>에 올려주세요.</h4>
       </section>
       <section data-bespoke-state="emphatic" data-bespoke-hash="ref"><span class="small_title bullet">부록 1</span>
         <h2>참고 자료 및 학습자료</h2>
@@ -497,6 +502,7 @@ git clone &lt;repo&gt; &lt;directory&gt;
           <li><i class="fa-li fa fa-link"></i><a href="http://git-scm.com/book/ko" target="_blank">Pro Git</a></li>
           <li><i class="fa-li fa fa-link"></i><a href="http://pismute.github.io/whygitisbetter/" target="_blank">Why Git is Better then X</a></li>
           <li><i class="fa-li fa fa-link"></i><a href="http://www.insightbook.co.kr/wp-content/uploads/2013/04/git-%EC%B9%98%ED%8A%B8%EC%8B%9C%ED%8A%B8%ED%94%84%EB%A6%B0%ED%8A%B8.pdf" target="_blank">Git 작업 흐름과 명령어 (Cheet Sheet)</a></li>
+          <li><i class="fa-li fa fa-link"></i><a href="http://learnbranch.urigit.com/" target="_blank">Git Branch 배우기</a></li>
         </ul>
       </section>
     </article>

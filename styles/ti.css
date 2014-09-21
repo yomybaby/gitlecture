@@ -240,6 +240,12 @@ pre.dark {
 img {
   width: 500px;
 }
+img.w800 {
+  width: 800px;
+}
+img.w600 {
+  width: 600px;
+}
 img.w400 {
   width: 400px;
 }
