@@ -28,10 +28,10 @@ html
     article#main-article
       section(data-bespoke-state='reveal')
         span.small_title.txt_L
-          i.fa.fa-warning
-          |  좌우키 혹은 스페이스키로 페이지 이동하세요.(모바일은 좌우 swipe)
+          //- i.fa.fa-warning
+          //- |  좌우키 혹은 스페이스키로 페이지 이동하세요.(모바일은 좌우 swipe)
           br
-          //- <div class="fb-like" data-href="http://yomybaby.github.io/gitlecture" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+          <div class="fb-like" data-href="http://yomybaby.github.io/gitlecture" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         h1
           i.fa.fa-git
           |  제대로 써보기
@@ -39,7 +39,7 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 rev.20140818
+        h5 rev.20140922
         br
         
 
@@ -47,20 +47,24 @@ html
         //- img(src="")
         h2 이종은
         h3 Yo Studio
-        br
         ui.fa-ul
           li
             i.fa-li.fa.fa-angle-right
             | Web & App 컨설팅 / 교육 / 제작
           li
             i.fa-li.fa.fa-angle-right
-            | Javascript 중독자 : node.js, backbone.js, titanium..
-        p
-          i.fa.fa-twitter
-          a(href="https://twitter.com/yomybaby")  @yomybaby
-          br
-          i.fa.fa-github
-          a(href="https://github.com/yomybaby")  yomybaby
+            | Javascript 중독자 : titanium, backbone.js, node.js..
+        ul
+          li
+            i.fa.fa-envelope
+            a(href="mailto:jong@yostudio.kr")  jong@yostudio.kr
+          li
+            i.fa.fa-twitter
+            a(href="https://twitter.com/yomybaby")  @yomybaby
+          li
+            i.fa.fa-github
+            a(href="https://github.com/yomybaby")  yomybaby
+          
 
       section(data-bespoke-state='emphatic')
         //- img(src="")
@@ -327,7 +331,7 @@ html
         span.small_title= smallTitle
         h4 빠르고 안전하고 자유로운 이유 2.
         h2 분산버전 관리 시스템
-        img.w400(src="https://www.atlassian.com/git/migration/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file0/document/git-migration-centralized-vs-distributed.png")
+        img.w400(src="./images/cent_dist.svg")
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
         h1
@@ -611,7 +615,7 @@ html
           i.fa.fa-code-fork.fa-rotate-180
           |  Merge의 종류 1.
         h2 Fast-Forward Merge
-        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_merge-fast-forward.png")
+        img(src="./images/07.svg")
       
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -619,7 +623,7 @@ html
           i.fa.fa-code-fork.fa-rotate-180
           |  Merge의 종류 2.
         h2 3-way merge
-        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/git-branches/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/02/imageBinary/git-tutorial_merge-three-way.png")    
+        img(src="./images/08.svg")
 
       - smallTitle="Git으로 되돌리기"
       section(data-bespoke-state='reveal',data-bespoke-hash="undo")
@@ -682,7 +686,7 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 Revert vs. Reset
-        img.w200(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/undoing-changes/pageSections/00/contentFullWidth/0/tabs/02/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial_revert-vs-reset.png")
+        img.w200(src="./images/git-tutorial_revert-vs-reset.png")
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -863,33 +867,40 @@ html
           |  Branch 하나만 쓸께요.
         h2 Centralized Workflow
         div
-          img.w150(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file1/document/git-workflow-svn-push-local.png")
-          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          img.w200.bullet(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/09/contentFullWidth/0/content_files/file2/document/git-workflow-svn-managingconflicts.png")
+          img(src="./images/11.svg")
+          
 
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle + " - Centralized Workflow"
-        h4 
-          i.fa.fa-group
-          |  Branch 하나만 쓸께요.
-        h2 Centralized Workflow
-        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/05/contentFullWidth/00/content_files/file1/document/git-workflow-svn-6.png")
-
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle + " - Centralized Workflow"
-        h4 
-          i.fa.fa-group
-          |  개발 단위(기능) 별로 branch 만들께요.
-        h2 Feature Branch Workflow
-        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png")
+      //- section(data-bespoke-state='emphatic')
+      //-   span.small_title.bullet= smallTitle + " - Centralized Workflow"
+      //-   h4 
+      //-     i.fa.fa-group
+      //-     |  Branch 하나만 쓸께요.
+      //-   h2 Centralized Workflow
+      //-   img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/00/pageSections/05/contentFullWidth/00/content_files/file1/document/git-workflow-svn-6.png")
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle + " - Feature Branch Workflow"
         h4 
           i.fa.fa-group
-          |  Feature Branch Workflow : master는 항상 무결점!
-        h2 그럼 섞어서 확인은 어디서??
-        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/01/pageSections/07/contentFullWidth/0/content_files/file0/document/git-workflow-feature-branch-1.png")
+          |  개발 단위(기능) 별로 branch 만들께요.
+        h2 Feature Branch Workflow
+        img(src="./images/featured.svg")
+
+      section(data-bespoke-state='emphatic',style="transition:none !important")
+        span.small_title.bullet= smallTitle + " - Feature Branch Workflow"
+        h4 
+          i.fa.fa-group
+          |  개발 단위(기능) 별로 branch 만들께요.
+        h2 Feature Branch Workflow
+        img(src="./images/featured-1.svg")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle + " - Feature Branch Workflow"
+        h4 
+          i.fa.fa-group
+          |  Feature Branch Workflow. 심플하고 자유롭다.
+        h2.bullet 너무 자유로워서 관리의 어려움
+        img.bullet(src="./images/toomanyfeatured.svg")
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle + " - Gitflow Workflow"
@@ -927,13 +938,13 @@ html
           | Forking Workflow
         br
         i.fa.fa-star.fa-2x.blue
-        img.w300(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/03/pageSections/0/contentFullWidth/0/content_files/file/git-workflows-forking.png")
+        img.w300(src="./images/fork.svg")
         p
-          span.green 개발자1
-          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          span.red 관리자
-          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          span.puple 개발자2
+          span.puple 개발자1
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          span 관리자
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          span.green 개발자2
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle + " - Forking Workflow"
@@ -947,7 +958,7 @@ html
         p.bullet 내 Repository의 이 Branch를
           br
           | 공식 Repository의 그 Branch에 Pull해주세요.
-        img.w400.bullet(src="https://www.atlassian.com/git/workflows/pageSections/00/contentFullWidth/0/tabs/04/pageSections/07/contentFullWidth/0/content_files/file0/document/pull-request-7.png")
+        img.w400.bullet(src="https://www.atlassian.com/git/images/tutorials/collaborating/making-a-pull-request/pull-request-7.png")
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -962,22 +973,23 @@ html
           li tortoisegit
           li ..
 
-
+      section(data-bespoke-state='reveal',data-bespoke-hash="wrapup")
+        h3 마무리!
+        h2.white
+          i.fa.fa-heart.red
+          |  Commit과 Branch의 이해
+        br
+        p.white 미처 다루지 못한 내용 : rebase, hook, .bash_profile ..
+        
       section(data-bespoke-state='success success2')
-        h2 준비된 내용은 여기까지!
-        h3.white 
-          a(href="http://learnbranch.urigit.com",target="_blank") 점검 실습
-          |  or QnA
-        p.gray 기타 : rebase, hook, .bash_profile ..
+        h1 감사합니다.
+        h2.white
+          a(href="http://class.yostudio.kr",target="_blank").white class.yostudio.kr
         br
         h4.white
-          | 본 자료는 
-          br
-          a.whitelink(href="http://yomybaby.github.io/gitlecture/") yomybaby.github.io/gitlecture
-          | 에서 확인 가능합니다.
-
-      section(data-bespoke-state='success')
-        h1 감사합니다.
+          | 강의 후에도 강의 관련 질문 및 요청사항은 
+          a(href="http://class.yostudio.kr",target="_blank") class.yostudio.kr
+          | 에 올려주세요.
 
       section(data-bespoke-state='emphatic', data-bespoke-hash="ref")
         span.small_title.bullet 부록 1
@@ -998,6 +1010,9 @@ html
           li
             i.fa-li.fa.fa-link
             a(href="http://www.insightbook.co.kr/wp-content/uploads/2013/04/git-%EC%B9%98%ED%8A%B8%EC%8B%9C%ED%8A%B8%ED%94%84%EB%A6%B0%ED%8A%B8.pdf",target="_blank") Git 작업 흐름과 명령어 (Cheet Sheet)
+          li
+            i.fa-li.fa.fa-link
+            a(href="http://learnbranch.urigit.com/",target="_blank") Git Branch 배우기
             
 
     // build:js scripts/scripts.js
