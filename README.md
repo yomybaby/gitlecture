@@ -1,21 +1,22 @@
-# Hello Ti
-> A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
+# Git 강의 자료
+> 이 자료는 [Bespoke.js](http://markdalgleish.com/projects/bespoke.js)를 기반으로 만들어졌습니다.  [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
 
-## View slides locally
+## 슬라이드를 로컬에서 보려면
 
-First, ensure you have the following installed:
+먼저, 아래 사항이 설치되어 있어야 합니다.
 
 1. [Node.js](http://nodejs.org)
 2. [Bower](http://bower.io): `$ npm install -g bower`
 3. [Grunt](http://gruntjs.com): `$ npm install -g grunt-cli`
 
-Then, install dependencies and run the preview server:
+설치가 완료되면 아래 명령어를 통해 dependencies를 설치하고 미리보기 서버를 실행하면 됩니다.
 
 ```bash
 $ npm install && bower install
 $ grunt server
 ```
 
+<<<<<<< HEAD
 
 ## 추가할 예정인 내용
 * from Pro git
@@ -32,3 +33,6 @@ Git에 대해 호기심이 생긴 분이라 생각한다. 강의를 듣고 Git�
 
 * git cat-file -t 00000
 * git cat-file commit 0000
+=======
+[github page](http://yomybaby.github.io/gitlecture)에서는 바로 슬라이드를 보실 수 있습니다.
+>>>>>>> 0db5a5c43889190fe8974eba2f89279302e53b18
