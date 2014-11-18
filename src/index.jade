@@ -27,10 +27,10 @@ html
     - var smallTitle ='';
     article#main-article
       section(data-bespoke-state='reveal')
-        span.small_title.txt_L
-          i.fa.fa-warning
-          |  좌우 방향키로 페이지 이동하세요.(모바일은 좌우 swipe)
-          br
+        //- span.small_title.txt_L
+        //-   i.fa.fa-warning
+        //-   |  좌우 방향키로 페이지 이동하세요.(모바일은 좌우 swipe)
+        //-   br
           //- <div class="fb-like" data-href="http://yomybaby.github.io/gitlecture" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         h1
           i.fa.fa-git
@@ -213,8 +213,9 @@ html
         h3 Revision Control Software :
         p.bullet
           | Git, SVN, Perforce, Mecurial, CVS...
+          br
           img.w300(src="https://www.assembla.com/content/assets/img/content/products/features/vc-hosting.png")
-        h4.bullet 둘의 차이가 뭐죠?
+        //- h4.bullet 둘의 차이가 뭐죠?
 
       section(data-bespoke-state='emphatic')
         h2 왜 사용하나요?
@@ -302,6 +303,12 @@ html
             i.fa.fa-ellipsis-h
 
       section(data-bespoke-state='emphatic')
+        h2.bullet 오늘 이것만은 제대 알고 가자!
+        h1.bullet 1. Commit
+        h1.bullet 2. Branch
+
+
+      section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
         h2
           i.fa.fa-git
@@ -351,40 +358,103 @@ html
           i.fa.fa-cutlery.fa-3x
         h3= smallTitle
 
-      section(data-bespoke-state='emphatic')
+      section(data-bespoke-state='emphatic',data-bespoke-hash="install")
         span.small_title= smallTitle
-        h2 
+        h1 
+          i.fa.fa-gear
+          |  Git 설치 및 사용
+        br
+        ul.big_ul
+          li
+            strong Git
+            br
+            a(href="http://git-scm.com/") git-scm.com
+          li
+            strong Source Tree 
+            span.small_font (GUI Tool) 
+            br
+            a(href="http://www.sourcetreeapp.com/") sourcetreeapp.com
+          li
+            strong Sublime Text
+            span.small_font (Text Editor) 
+            br
+            a(href="http://www.sublimetext.com/2") sublimetext.com/2
+        //- h2
+        //-   i.fa.fa-github  Github.com 계정 만들기
+
+      section(data-bespoke-state='shark')
+        span.small_title= smallTitle
+        h1 
           i.fa.fa-refresh
           |  역지사지
-        p git의 만드는 토발즈의 마음이 되어..
+        h3.white git의 만드는 토발즈의 마음이 되어..
       
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        h2 그림 그리기에 빗대어 설명
+        h3 (Keynote 자료)
+
+      //- section(data-bespoke-state='emphatic')
+      //-   span.small_title= smallTitle
+      //-   h2 나는 화가 그림을 그리다.
+      
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 기록을 위해 사진으로 찍어두다 1
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 기록을 위해 사진으로 찍어두다 2
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 기록을 위해 사진으로 찍어두다 3
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 찍은 사진의 순서가 필요하다.
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 사진에 번호를 붙이다
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 왜 Git은 Hash로 붙였을까?
+
+      //- section
+      //-   h2.bullet Hash 중복이 발생하지 않나?
+      //-   h3.bullet SHA1의 중복 발생 수학적 확률 : 2의 80제곱분의 1
+      //-   pre.bullet 그냥 어느 날 동료가 전부 한순간에 늑대에게 물려 죽을 확률이 훨씬 더 높다.
+      //-     br
+      //-     | - Pro Git 중에서..
+
+      //- section(data-bespoke-state='emphatic')
+      //-   span.small_title= smallTitle
+      //-   h2 모자가 맘에 안들어!
+
+      //- section(data-bespoke-state='emphatic')
+      //-   span.small_title= smallTitle
+      //-   h2 여러 가지로 나뉘다.
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 가지를 뭐라고 부를 것인가?
+
+      //- section(data-bespoke-state='emphatic',style="transition:none !important")
+      //-   span.small_title= smallTitle
+      //-   h2 가지에 의미(뜻)있는 이름을..    
+      //-   h3 master, develop..  
+
+
       - smallTitle="Git으로 기록하기"
       section(data-bespoke-state='reveal',data-bespoke-hash="doGit")
         h1
           i.fa.fa-camera-retro.fa-3x
         h3= smallTitle
 
-      section(data-bespoke-state='emphatic',data-bespoke-hash="install")
-        span.small_title= smallTitle
-        h2 
-          i.fa.fa-gear
-          |  설치 먼저
-        br
-        ul.big_ul
-          li
-            | Git : 
-            br
-            a(href="http://git-scm.com/") git-scm.com
-          li
-            | Source Tree : 
-            br
-            a(href="http://www.sourcetreeapp.com/") sourcetreeapp.com
-          li
-            | Sublime Text : 
-            br
-            a(href="http://www.sublimetext.com/2") sublimetext.com/2
-        h2
-          i.fa.fa-github  Github.com 계정 만들기
+      
 
 
       section(data-bespoke-state='emphatic')
@@ -396,11 +466,19 @@ html
           code.language-bash.
             git init
         img.w300.bullet.brighter(src="http://strongloop.com/wp-content/uploads/2014/04/mind-blowing_1454.gif.pagespeed.ce.hxxM_pKi8A.gif")
-        pre.small_font.dark.bullet
-          code.language-bash
-            :markup
-              git init <directory>
-              git init --bare <directory>
+        //- pre.small_font.dark.bullet
+        //-   code.language-bash
+        //-     :markup
+        //-       git init <directory>
+        //-       git init --bare <directory>
+
+      section(data-bespoke-state='emphatic')
+        h2 .git 폴더
+        img.w400(src="images/_git.jpg")
+      section(data-bespoke-state='emphatic',style="transition:none !important")
+        h2 .git 폴더
+        img.w400(src="images/_git_filter.jpg")
+
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -506,7 +584,8 @@ html
           li.bullet
             i.fa-li.fa.fa-file-text-o
             | Modified
-      
+        p.bullet (Keynote 추가 설명)
+
       - smallTitle="Git으로 가지치기(Branch)"
       section(data-bespoke-state='reveal',data-bespoke-hash="branch")
         h1
@@ -974,10 +1053,10 @@ html
           li ..
 
       section(data-bespoke-state='reveal',data-bespoke-hash="wrapup")
-        h3 마무리!
+        h3 가장 중요한 것은!
         h2.white
           i.fa.fa-heart.red
-          |  Commit과 Branch의 이해
+          |  Commit과 Branch의 이해!
         br
         p.white 미처 다루지 못한 내용 : rebase, hook, .bash_profile ..
         
