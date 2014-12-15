@@ -188,6 +188,13 @@ pre.right {
   background-color: transparent;
   color: #fff;
 }
+.red .background {
+  background-color: #e61875;
+}
+.red section {
+  background-color: transparent;
+  color: #fff;
+}
 p {
   margin-left: 0;
   margin-right: 0;
