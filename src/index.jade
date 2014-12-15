@@ -13,7 +13,7 @@ html
     // endbuild
 
     link(rel="stylesheet", href="bower_components/octicons/octicons/octicons.css")
-    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
   body
     div(id="fb-root")
     script.
@@ -39,7 +39,7 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 rev.201410
+        h5 ver.201412
         br
         
 
@@ -88,66 +88,80 @@ html
             img(src='tced.png', class="badge")
             &nbsp;
             img(src='titans.png', class="badge")
+      
+      section(data-bespoke-state='hello')
+        span.small_title 여러분이 궁금합니다.
+        h2 인사 나눠요 ^^
+        //- ul 
+        //-   li 어떤 일을 하시는 개발자?
+        //-   li Git을 어떻게(Workflow/Branch전략) 사용하고 계신가요?
+        //-   li 
+        //-     i.fa.fa-desktop
+        //-     |  컴퓨터로 업무보시죠?
 
       section(data-bespoke-state='stair')
         span.small_title 목차
         h2 
           //- i.fa.fa-list-alt
           | 목차
-        ui.fa-ul
-          li
-            i.fa-li.fa.fa-file-text-o
-            a.whitelink(href="#withfile")
-              | 파일과 함께하는 일상
-          li
-            i.fa-li.fa.fa-wrench
-            a.whitelink(href="#toolHistory")
-              | 파일 관리 도구의 탄생
-          li
-            i.fa-li.fa.fa-git-square
-            a.whitelink(href="#gitOverview")
-              | 바로 알기
-          li
-            i.fa-li.fa.fa-camera-retro
-            a.whitelink(href="#doGit")
-              | 기록하기
-          li
-            i.fa-li.fa.fa-code-fork
-            a.whitelink(href="#branch")
-              | 가지치기(Branch)
-          li
-            i.fa-li.fa.fa-backward
-            a.whitelink(href="#undo")
-              | 되돌리기
-          li
-            i.fa-li.fa.fa-cloud-upload
-            a.whitelink(href="#remote")
-              | 원격 저장소
-          li
-            i.fa-li.fa.fa-group
-            a.whitelink(href="#workflow")
-              | Workflow
 
-      section(data-bespoke-state='hello')
-        span.small_title 여러분이 궁금합니다.
-        h2 당신은 누구십니까?^^
-        ul 
-          li 어떤 일을 하시는 개발자?
-          li Git을 어떻게(Workflow/Branch전략) 사용하고 계신가요?
-          li 
-            i.fa.fa-desktop
-            |  컴퓨터로 업무보시죠?
+          ui.fa-ul
+
+            //- li
+            //-   i.fa-li.fa.fa-file-text-o
+            //-   a.whitelink(href="#withfile")
+            //-     | 파일과 함께하는 일상
+            //- li
+            //-   i.fa-li.fa.fa-wrench
+            //-   a.whitelink(href="#toolHistory")
+            //-     | 파일 관리 도구의 탄생
+            li
+              i.fa-li.fa.fa-git-square
+              a.whitelink(href="#gitOverview")
+                | 맛보기
+            li
+              i.fa-li.fa.fa-camera-retro
+              a.whitelink(href="#doGit")
+                | Commit
+            li
+              i.fa-li.fa.fa-code-fork
+              a.whitelink(href="#branch")
+                | Branch
+            //- li
+            //-   i.fa-li.fa.fa-backward
+            //-   a.whitelink(href="#undo")
+            //-     | 되돌리기
+            //- li
+            //-   i.fa-li.fa.fa-cloud-upload
+            //-   a.whitelink(href="#remote")
+            //-     | 원격 저장소
+            li
+              i.fa-li.fa.fa-group
+              a.whitelink(href="#remote")
+                | 협업하기
+
+      section(data-bespoke-state='emphatic')
+        span.small_title Tip
+        h1
+          i.fa.fa-question
+          |   질문은 
+          br 
+          | 언제나
+          br 
+          | 어디서나
+        h2
+          | There are no stupid question.
       
-      - smallTitle = "파일과 함께하는 일상"
+      - smallTitle = "git의 탄생"
       section(data-bespoke-state='reveal',data-bespoke-hash="withfile")
         h1
-          i.fa.fa-file-text.fa-3x
+          i.fa.fa-birthday-cake.fa-3x
         h3= smallTitle
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
         h2 
           i.fa.fa-user.pull-left
-          | 일상 업무
+          | 파일과 함께 하는 업무
         ui.fa-ul.bullet
           li.bullet
             i.fa-li.fa.fa-file-text-o 
@@ -191,30 +205,22 @@ html
 
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
-        h2.bullet 우리는 누구? 인간!
-        h3.bullet 인간은 도구를 사용하는 동물
+        h2.bullet 우리는 누구?
+        h3.bullet 인간은 OO을 사용하는 동물
 
-      - smallTitle = '파일 관리 도구의 탄생'
-      section(data-bespoke-state='reveal',data-bespoke-hash="toolHistory")
-        h1
-          i.fa.fa-wrench.fa-3x
-        h3= smallTitle
+      //- - smallTitle = '파일 관리 도구의 탄생'
+      //- section(data-bespoke-state='reveal',data-bespoke-hash="toolHistory")
+      //-   h1
+      //-     i.fa.fa-wrench.fa-3x
+      //-   h3= smallTitle
+
 
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
-        h2 도구의 구분
-        h3 Revision History Tracker :
-        p
-          i.fa.fa-google
-          a(href="https://docs.google.com/a/yomybaby.com/document/d/1G-z2Q8_kAgv3qfBQ6te5c81ZdbjgMQ89vLLROb0R-dk/edit",target="_blank")  google 문서의 '업데이트 기록보기', 
-          i.fa.fa-wordpress
-          a(href="https://yomybaby.wordpress.com/wp-admin/revision.php?revision=304",target="_blank")  워드프레스 '리비전'
-        br
-        h3 Revision Control Software :
-        p.bullet
-          | Git, SVN, Perforce, Mecurial, CVS...
-          br
-          img.w300(src="https://www.assembla.com/content/assets/img/content/products/features/vc-hosting.png")
+        h2 
+          i.fa.fa-wrench
+          |  파일 관리 도구들
+        img.w500(src="https://www.assembla.com/content/assets/img/content/products/features/vc-hosting.png")
         //- h4.bullet 둘의 차이가 뭐죠?
 
       section(data-bespoke-state='emphatic')
@@ -257,7 +263,7 @@ html
 
 
       section(data-bespoke-state='emphatic')
-        span.small_title= smallTitle + " - git의 탄생"
+        span.small_title= smallTitle
         h2 리누스 토발즈
         img.w150(src="http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg")
         br
@@ -270,7 +276,7 @@ html
           | , 
           a(href="http://git-scm.com/book/ko/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A7%A7%EA%B2%8C-%EB%B3%B4%EB%8A%94-Git%EC%9D%98-%EC%97%AD%EC%82%AC",target="_blank") 짧게 보는 Git 역사
 
-      - smallTitle="Git 바로 알기"
+      - smallTitle="git 맛보기"
       section(data-bespoke-state='reveal',data-bespoke-hash="gitOverview")
         h1
           i.fa.fa-git.fa-3x
@@ -278,7 +284,7 @@ html
 
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
-        h2 설마?
+        h2 잠깐! 혹시?
         h3  git 그리고 github
         p.bullet
           i.fa.fa-git.fa-5x
@@ -320,7 +326,7 @@ html
           li.bullet
             i.fa-li.fa.fa-smile-o
             | 안전하다
-          li.bullet
+          li.bullet.red
             i.fa-li.fa.fa-smile-o
             | 자유롭다
 
@@ -382,18 +388,20 @@ html
         //- h2
         //-   i.fa.fa-github  Github.com 계정 만들기
 
-      section(data-bespoke-state='shark')
-        span.small_title= smallTitle
-        h1 
-          i.fa.fa-refresh
-          |  역지사지
-        h3.white git의 만드는 토발즈의 마음이 되어..
+      //- section(data-bespoke-state='shark')
+      //-   span.small_title= smallTitle
+      //-   h1 
+      //-     i.fa.fa-refresh
+      //-     |  역지사지
+      //-   h3.white git의 만드는 토발즈의 마음이 되어..
       
+      section(data-bespoke-state='emphatic')
+        h2 워밍업
 
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
-        h2 그림 그리기에 빗대어 설명
-        h3 (Keynote 자료)
+        <iframe src="//www.slideshare.net/slideshow/embed_code/41751708" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/yomybaby/assets-draw" title="Git의 Commit과 Branch" target="_blank">Git의 Commit과 Branch</a> </strong> from <strong><a href="//www.slideshare.net/yomybaby" target="_blank">JongEun Lee</a></strong> </div>
+
 
       //- section(data-bespoke-state='emphatic')
       //-   span.small_title= smallTitle
@@ -458,14 +466,15 @@ html
 
 
       section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h2 
+        span.small_title= smallTitle
+        h2.bullet
           i.fa.fa-git
           |  저장소 만들기
-        pre.dark
-          code.language-bash.
-            git init
-        img.w300.bullet.brighter(src="http://strongloop.com/wp-content/uploads/2014/04/mind-blowing_1454.gif.pagespeed.ce.hxxM_pKi8A.gif")
+        div.bullet
+          pre.dark
+            code.language-bash.
+              git init
+          img.w300.brighter(src="http://strongloop.com/wp-content/uploads/2014/04/mind-blowing_1454.gif.pagespeed.ce.hxxM_pKi8A.gif")
         //- pre.small_font.dark.bullet
         //-   code.language-bash
         //-     :markup
@@ -496,8 +505,10 @@ html
           br
           span.red Commit
           | 은 
+          br
           span.red Snapshot
-          | 이다.
+          | 을 저장하는 행위다.
+
 
       section(data-bespoke-state='staging')
         span.small_title.bullet= smallTitle
@@ -507,6 +518,18 @@ html
           span.green Stage 
           | 위로 올리는 것
         //img.w400(src="http://fc02.deviantart.net/fs70/f/2011/004/5/c/glee_stage_by_periru3-d36gik6.jpg")
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h2
+          i.fa.fa-camera-retro.fa-2x.red
+          br
+          span.red Stage
+          | 는
+          br
+          | Commit하기 위해 준비하는
+          span.red Snapshot
+          | 이다.
       
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -530,19 +553,25 @@ html
         ul.fa-ul
           li.bullet
             i.fa-li.fa.fa-camera-retro
-            | Blob : 파일을 찰칵
+            | Blob : 파일 내용
           li.bullet
             i.fa-li.fa.fa-camera-retro
-            | Tree object : 폴더구조를 찰칵
+            | Tree object : 폴더구조 (파일명, 하위폴더명)
+            br
+            | (파일 내용은 포함하지 않고 Blob의 Hash만 저장)
           li.bullet
             i.fa-li.fa.fa-camera-retro
-            | Commit object : Tree의 hash와 Commit 부가정보를 담아 찰칵
+            | Commit object : 최상위 폴더의 Tree hash와 Commit 부가정보 저장
           //- li.bullet
           //-   i.fa-li.fa.fa-hand-o-right
           //-   | Tag object : Commit을 가리키는 Pointer
           //- li.bullet
           //-   i.fa-li.fa.fa-hand-o-right
           //-   | Reference : Commit이나 Tag를 가리키는 Pointer
+
+      section(data-bespoke-state='emphatic')
+        span.small_title= smallTitle
+        <iframe src="//www.slideshare.net/slideshow/embed_code/39666439?startSlide=9" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/GoAtlassian/dont-fear-the-branch-marcus-bertrand" title="Don&#x27;t Fear the Branch - Marcus Bertrand" target="_blank">Don&#x27;t Fear the Branch - Marcus Bertrand</a> </strong> from <strong><a href="//www.slideshare.net/GoAtlassian" target="_blank">Atlassian</a></strong> </div>
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -627,6 +656,9 @@ html
             
         h3.bullet 단순 포인터! 겁나 싸죠?
       
+      section(data-bespoke-state='emphatic')
+        <iframe src="//www.slideshare.net/slideshow/embed_code/39666439?startSlide=25" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/GoAtlassian/dont-fear-the-branch-marcus-bertrand" title="Don&#x27;t Fear the Branch - Marcus Bertrand" target="_blank">Don&#x27;t Fear the Branch - Marcus Bertrand</a> </strong> from <strong><a href="//www.slideshare.net/GoAtlassian" target="_blank">Atlassian</a></strong> </div>
+
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 
@@ -992,7 +1024,7 @@ html
           | , &nbsp;
           a(href="https://www.atlassian.com/git/workflows#!workflow-gitflow",target="_blank") Atlassian 설명
         a(href="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png",target="_blank")
-          img.w300(src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png")
+          img.w300(src="./images/gitflow.png")
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle + " - Gitflow Workflow"
@@ -1007,6 +1039,9 @@ html
           | branch 삭제 등을 해야한다고요?
         br
         p.bullet.red 네, 하지만 우리는 도구를 사용하는 동물!
+
+      section(data-bespoke-state='emphatic')
+        h2 Gitflow 시연
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle + " - Forking Workflow"
@@ -1040,6 +1075,9 @@ html
         img.w400.bullet(src="https://www.atlassian.com/git/images/tutorials/collaborating/making-a-pull-request/pull-request-7.png")
 
       section(data-bespoke-state='emphatic')
+        h2 Pull Request 시연
+
+      section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 Workflow를 위한 저장소 관리
         ul
@@ -1060,7 +1098,7 @@ html
         br
         p.white 미처 다루지 못한 내용 : rebase, hook, .bash_profile ..
         
-      section(data-bespoke-state='success success2')
+      section(data-bespoke-state='red')
         h1 감사합니다.
         h2.white
           a(href="http://class.yostudio.kr",target="_blank").white class.yostudio.kr
