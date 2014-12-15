@@ -146,12 +146,37 @@ html
           i.fa.fa-question
           |   질문은 
           br 
-          | 언제나
+          | 언제
           br 
           | 어디서나
         h2
           | There are no stupid question.
       
+      section(data-bespoke-state='emphatic')
+        span.small_title Tip
+        h1 
+          i.fa.fa-star-half-o.fa-2x.red
+        h2.bullet 본 강좌의 반쪽은
+          br
+          | 여러분의 질문으로 완성됩니다.
+        br
+
+        div.bullet 
+          h3         
+            i.fa.fa-heart.red
+            |  REAL 후기
+          | - 
+          span.red 어떠한 질문이든 다 받아주시던 점
+          | 이 좋았습니다.
+          br
+          | - 질문에 대한 
+          span.red 답변을 상세히
+          |  해주어서 좋았습니다.
+          br
+          | - 질의에 
+          span.red  열정적으로
+          |  응답하는 모습이 좋았습니다.
+
       - smallTitle = "git의 탄생"
       section(data-bespoke-state='reveal',data-bespoke-hash="withfile")
         h1
@@ -396,7 +421,7 @@ html
       //-   h3.white git의 만드는 토발즈의 마음이 되어..
       
       section(data-bespoke-state='emphatic')
-        h2 워밍업
+        h1 준비운동
 
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
@@ -853,13 +878,29 @@ html
         span.small_title.bullet= smallTitle
         h2 Local? Remote?
         h3
-          i.fa.fa-desktop.fa-2x
+          i.fa.fa-github.fa-2x.blue
         img.w300(src="https://gp1.wac.edgecastcdn.net/8029C4/wac-small/wac/landing/git/tutorial/remote-repositories/pageSections/0/contentColumnTwo/0/imageBinary/git-tutorial-remote-repos.png",target="_blank")
-        h3.bullet
-          i.fa.fa-bitbucket.fa-2x
+        h3
+          i.fa.fa-user.fa-2x.green
           | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          i.fa.fa-github-alt.fa-2x
+          i.fa.fa-user.fa-2x.puple
 
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet= smallTitle
+        h4 
+          i.fa.fa-star.red
+          |  그 특별한 remote 이름
+        h2.bullet origin
+        br
+        h4.bullet
+          i.fa.fa-code-fork
+          |  Branch에서 master의 역할과 같이 
+          strong.red 기본(기준)
+          | 이 되는 것
+
+      section(data-bespoke-state='emphatic')
+        h2 Remote를 통한 협업 과정
+        h3 (그림을 그려가며..)
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 
@@ -896,18 +937,7 @@ html
               git remote add origin git@github.com:yomybaby/test.git
               git push -u origin master
       
-      section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
-        h4 
-          i.fa.fa-star.red
-          |  그 특별한 remote 이름
-        h2.bullet origin
-        br
-        h4.bullet
-          i.fa.fa-code-fork
-          |  Branch에서 master의 역할과 같이 
-          strong.red 기본(기준)
-          | 이 되는 것
+      
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
