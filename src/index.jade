@@ -39,7 +39,7 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 ver.201412
+        h5 ver.201501
         br
         
 
@@ -640,6 +640,22 @@ html
             | Modified
         p.bullet (Keynote 추가 설명)
 
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet. 정리 실습 1
+        h2 커밋 해봅시다!
+        p CLI와 Source Tree 에서 해보자. 
+          br
+          i.fa.fa-warning.red  
+          | 앞서가진 마세요! 일단 지금까지 배운 것만
+        pre.dark
+          code.language-bash.
+            git init
+            git add FILENAME
+            git commit -m "COMMIT_MESSAGE"
+            git status
+            git log
+
       - smallTitle="Git으로 가지치기(Branch)"
       section(data-bespoke-state='reveal',data-bespoke-hash="branch")
         h1
@@ -760,6 +776,24 @@ html
           |  Merge의 종류 2.
         h2 3-way merge
         img.w800(src="./images/08.svg")
+
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet. 정리 실습 2
+        h2 Branch 생성과 Merge 해봅시다!
+        p Fast-Forward Merge와 3-way Merge 두가지 모두 해보기
+          br
+          i.fa.fa-warning.red  
+          | Merge의 주체 Brach로 먼저 Checkout해야함을 주의
+        p TODO: 어떤모양이 될지 제시해줄 그림 두개 필요
+        pre.dark
+          code.language-bash.
+            git branch NEW_BRANCH_NAME
+            git checkout BRANCH_NAME
+            git checkout -b NEW_BRANCH_NAME
+            git merge TARGET_BRANCH_NAME
+            git add FILENAME
+            git commit -m "COMMIT_MESSAGE"
 
       - smallTitle="Git으로 되돌리기"
       section(data-bespoke-state='reveal',data-bespoke-hash="undo")
@@ -917,11 +951,11 @@ html
               git remote rename <old-name> <new-name>
 
       section(data-bespoke-state='emphatic')
-        span.small_title.bullet= smallTitle
+        span.small_title.bullet 정리실습 3
         h2 
           i.fa.fa-cloud-upload.fa-2x
           br
-          | Github Rmote Push 데모
+          | Github에 올려보자!
         br
         pre.dark
           code.language-bash
@@ -948,6 +982,15 @@ html
         p.bullet Remote에 있는 내용를 전부 가져오는 행위는 동일
           br
           | Local branch랑 합치면 Pull (내 작업 Working Directory에 영향)
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet 정리실습 3
+        h2 Fetch와 Pull을 직접 비교해보자
+        ol
+          li 먼저 github에서 수정하고
+          li 수정한 내용 pull 해보고
+          li 다시 github에서 수정하고
+          li 수정한 내용 fetch 해보자
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -1106,6 +1149,16 @@ html
 
       section(data-bespoke-state='emphatic')
         h2 Pull Request 시연
+
+      section(data-bespoke-state='emphatic')
+        span.small_title.bullet 정리실습 4
+        h2 Pull Request 해보자
+        ol
+          li 실습용 저장소 fork 하기
+          li fork한 저장소 내 컴퓨터에 clone 하기
+          li 수정해서 commit 하기
+          li 내 원격 저장소에 push 하기
+          li github에 들어가서 pull request 올리기
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
