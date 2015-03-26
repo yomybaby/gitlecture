@@ -97,9 +97,9 @@ pre.right {
   -webkit-box-shadow: inset 0 0 300px rgba(0,0,0,0.5);
   box-shadow: inset 0 0 300px rgba(0,0,0,0.5);
   z-index: -1;
-  -webkit-filter: grayscale(0.5) brightness(1.1);
-  -moz-filter: grayscale(0.5) brightness(1.1);
-  filter: grayscale(0.5) brightness(1.1);
+  -webkit-filter: grayscale(0.5) brightness(0.8);
+  -moz-filter: grayscale(0.5) brightness(0.8);
+  filter: grayscale(0.5) brightness(0.8);
   background-image: url("http://www.thedisabledcubicle.com/wp-content/uploads/2012/11/apollorockygif1.gif");
 }
 .hello section {
@@ -115,9 +115,9 @@ pre.right {
   background-position: center center;
   background-repeat: no-repeat;
   content: "";
-  -webkit-filter: grayscale(0.3) brightness(1.1);
-  -moz-filter: grayscale(0.3) brightness(1.1);
-  filter: grayscale(0.3) brightness(1.1);
+  -webkit-filter: grayscale(0.3) brightness(0.8);
+  -moz-filter: grayscale(0.3) brightness(0.8);
+  filter: grayscale(0.3) brightness(0.8);
   z-index: -1000;
   width: 20%;
   height: 20%;
@@ -166,9 +166,9 @@ pre.right {
 }
 .stair .background {
   background-image: url("../images/mario.gif");
-  -webkit-filter: grayscale(0.3) brightness(1.4000000000000001);
-  -moz-filter: grayscale(0.3) brightness(1.4000000000000001);
-  filter: grayscale(0.3) brightness(1.4000000000000001);
+  -webkit-filter: grayscale(0.3) brightness(1.1);
+  -moz-filter: grayscale(0.3) brightness(1.1);
+  filter: grayscale(0.3) brightness(1.1);
 }
 .stair section {
   background-color: transparent;
@@ -321,4 +321,10 @@ span.light {
   margin-top: 5px;
   width: 150px !important;
   height: 20px !important;
+}
+.normal {
+  font-weight: normal;
+}
+.underline {
+  text-decoration: underline;
 }
