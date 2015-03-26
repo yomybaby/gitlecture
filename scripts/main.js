@@ -19,7 +19,7 @@
 bespoke.from('#main-article', {
   keys: true,
   touch: true,
-  // bullets: '.bullet',
+  bullets: '.bullet',
   scale: true,
   hash: true,
   progress: true,
