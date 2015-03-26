@@ -39,31 +39,29 @@ html
           i.fa.fa-git
           |  이해와 활용
         h5 이종은
-        h5 ver.201501
+        h5 ver.20150327
         br
         
 
       section(data-bespoke-state='emphatic')
-        //- img(src="")
+        img(src="./images/yostudio_logo.svg",style="width:200px;")
         h2 이종은
         h3 Yo Studio
         ui.fa-ul
           li
             i.fa-li.fa.fa-angle-right
             | Web & App 컨설팅 / 교육 / 제작
-          li
-            i.fa-li.fa.fa-angle-right
-            | Javascript 중독자 : titanium, backbone.js, node.js..
+          //- li
+          //-   i.fa-li.fa.fa-angle-right
+          //-   | Javascript 중독자 : titanium, backbone.js, node.js..
         ul
           li
             i.fa.fa-envelope
             a(href="mailto:jong@yostudio.kr")  jong@yostudio.kr
           li
             i.fa.fa-twitter
-            a(href="https://twitter.com/yomybaby")  @yomybaby
-          li
             i.fa.fa-github
-            a(href="https://github.com/yomybaby")  yomybaby
+            a(href="https://twitter.com/yomybaby")  @yomybaby
           
 
       section(data-bespoke-state='emphatic')
@@ -89,15 +87,34 @@ html
             &nbsp;
             img(src='titans.png', class="badge")
       
-      section(data-bespoke-state='hello')
-        span.small_title 여러분이 궁금합니다.
-        h2 인사 나눠요 ^^
+      //- section(data-bespoke-state='hello')
+      //-   span.small_title 여러분이 궁금합니다.
+      //-   h2 인사 나눠요 ^^
         //- ul 
         //-   li 어떤 일을 하시는 개발자?
         //-   li Git을 어떻게(Workflow/Branch전략) 사용하고 계신가요?
         //-   li 
         //-     i.fa.fa-desktop
         //-     |  컴퓨터로 업무보시죠?
+      section(data-bespoke-state='emphatic')
+        h1.bullet
+          i.fa.fa-git.fa-3x
+        h2.bullet 사용하고 계시죠?
+
+      section(data-bespoke-state='emphatic')
+        span.fa-5x.bullet 🌼 = 
+          span.bullet branch
+        span.fa-2x.bullet 😨 branch 두려워 마세요!
+
+      section(data-bespoke-state='emphatic')
+        h2 왜 두려울까요?
+        ul.bullet
+          li.bullet Merge는 어렵다?
+          li.bullet branch는 복잡하다?
+
+      section(data-bespoke-state='emphatic')
+        h1.bullet 아니요.
+        h2.bullet 별거아닌 Branch
 
       section(data-bespoke-state='stair')
         span.small_title 목차
@@ -118,7 +135,7 @@ html
             li
               i.fa-li.fa.fa-git-square
               a.whitelink(href="#gitOverview")
-                | 맛보기
+                | 개요
             li
               i.fa-li.fa.fa-camera-retro
               a.whitelink(href="#doGit")
@@ -140,17 +157,17 @@ html
               a.whitelink(href="#remote")
                 | 협업하기
 
-      section(data-bespoke-state='emphatic')
-        span.small_title Tip
-        h1
-          i.fa.fa-question
-          |   질문은 
-          br 
-          | 언제
-          br 
-          | 어디서나
-        h2
-          | There are no stupid question.
+      //- section(data-bespoke-state='emphatic')
+      //-   span.small_title Tip
+      //-   h1
+      //-     i.fa.fa-question
+      //-     |   질문은 
+      //-     br 
+      //-     | 언제
+      //-     br 
+      //-     | 어디서나
+      //-   h2
+      //-     | There are no stupid question.
       
       section(data-bespoke-state='emphatic')
         span.small_title Tip
@@ -161,21 +178,23 @@ html
           | 여러분의 질문으로 완성됩니다.
         br
 
-        div.bullet 
-          h3         
-            i.fa.fa-heart.red
-            |  REAL 후기
-          | - 
-          span.red 어떠한 질문이든 다 받아주시던 점
-          | 이 좋았습니다.
-          br
-          | - 질문에 대한 
-          span.red 답변을 상세히
-          |  해주어서 좋았습니다.
-          br
-          | - 질의에 
-          span.red  열정적으로
-          |  응답하는 모습이 좋았습니다.
+      
+
+        //- div.bullet 
+        //-   h3         
+        //-     i.fa.fa-heart.red
+        //-     |  REAL 후기
+        //-   | - 
+        //-   span.red 어떠한 질문이든 다 받아주시던 점
+        //-   | 이 좋았습니다.
+        //-   br
+        //-   | - 질문에 대한 
+        //-   span.red 답변을 상세히
+        //-   |  해주어서 좋았습니다.
+        //-   br
+        //-   | - 질의에 
+        //-   span.red  열정적으로
+        //-   |  응답하는 모습이 좋았습니다.
 
       - smallTitle = "git의 탄생"
       section(data-bespoke-state='reveal',data-bespoke-hash="withfile")
@@ -307,16 +326,7 @@ html
           i.fa.fa-git.fa-3x
         h3= smallTitle
 
-      section(data-bespoke-state='emphatic')
-        span.small_title= smallTitle
-        h2 잠깐! 혹시?
-        h3  git 그리고 github
-        p.bullet
-          i.fa.fa-git.fa-5x
-          span.fa-stack.fa-5x(style="margin-top:-15%")
-            | ==
-          i.fa.fa-github.fa-5x
-        i.fa.fa-ban.fa-stack.fa-5x.red.bullet(style="position:absolute;top:0;font-size:290px;top:-30px;")
+      //- 시.fa-5x.red.bullet(style="position:absolute;top:0;font-size:290px;top:-30px;")
       
       section(data-bespoke-state='whatisthis')
         span.small_title= smallTitle
@@ -383,33 +393,33 @@ html
           br
           | 알고 있다.
 
-      - smallTitle="Git 주요 개념 맛보기"
+      - smallTitle="Git 이해를 위한 준비 운동"
       section(data-bespoke-state='reveal',data-bespoke-hash="examGit")
         h1
-          i.fa.fa-cutlery.fa-3x
+          i.fa.fa-futbol-o.fa-3x
         h3= smallTitle
 
-      section(data-bespoke-state='emphatic',data-bespoke-hash="install")
-        span.small_title= smallTitle
-        h1 
-          i.fa.fa-gear
-          |  Git 설치 및 사용
-        br
-        ul.big_ul
-          li
-            strong Git
-            br
-            a(href="http://git-scm.com/") git-scm.com
-          li
-            strong Source Tree 
-            span.small_font (GUI Tool) 
-            br
-            a(href="http://www.sourcetreeapp.com/") sourcetreeapp.com
-          li
-            strong Sublime Text
-            span.small_font (Text Editor) 
-            br
-            a(href="http://www.sublimetext.com/2") sublimetext.com/2
+      //- section(data-bespoke-state='emphatic',data-bespoke-hash="install")
+      //-   span.small_title= smallTitle
+      //-   h1 
+      //-     i.fa.fa-gear
+      //-     |  Git 설치 및 사용
+      //-   br
+      //-   ul.big_ul
+      //-     li
+      //-       strong Git
+      //-       br
+      //-       a(href="http://git-scm.com/") git-scm.com
+      //-     li
+      //-       strong Source Tree 
+      //-       span.small_font (GUI Tool) 
+      //-       br
+      //-       a(href="http://www.sourcetreeapp.com/") sourcetreeapp.com
+      //-     li
+      //-       strong Sublime Text
+      //-       span.small_font (Text Editor) 
+      //-       br
+      //-       a(href="http://www.sublimetext.com/2") sublimetext.com/2
         //- h2
         //-   i.fa.fa-github  Github.com 계정 만들기
 
@@ -419,9 +429,6 @@ html
       //-     i.fa.fa-refresh
       //-     |  역지사지
       //-   h3.white git의 만드는 토발즈의 마음이 되어..
-      
-      section(data-bespoke-state='emphatic')
-        h1 준비운동
 
       section(data-bespoke-state='emphatic')
         span.small_title= smallTitle
@@ -508,10 +515,10 @@ html
 
       section(data-bespoke-state='emphatic')
         h2 .git 폴더
-        img.w400(src="images/_git.jpg")
+        img.w400(src="./images/git_folder.jpg")
       section(data-bespoke-state='emphatic',style="transition:none !important")
         h2 .git 폴더
-        img.w400(src="images/_git_filter.jpg")
+        img.w400(src="./images/git_folder_filter.jpg")
 
 
       section(data-bespoke-state='emphatic')
@@ -520,7 +527,7 @@ html
         pre.dark
           code.language-bash
             :markup
-              git add first.txt
+              git add README.md
               git commit -m "first commit"
 
       section(data-bespoke-state='emphatic')
@@ -563,12 +570,16 @@ html
         pre.dark
           code.language-bash
             :markup
-              git add first.txt
+              git add README.md
               git commit -m "first commit"
         pre.dark.bullet
           code.language-bash
             :markup
               git commit -a -m "first commit"
+
+      section(data-bespoke-state='emphatic')
+        h3 FAQ.
+        h2 왜 Stage가 있는거죠?
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -609,7 +620,7 @@ html
         //-     | src/hello.c
         img.w150(src="tree_example.png")
         br
-        img.w400(src="http://wildlyinaccurate.com/wp-content/uploads/2014/05/tree-graph.png")
+        img.w400(src="http://wildlyinaccurate.com/assets/tree-graph.png")
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
@@ -785,7 +796,7 @@ html
           br
           i.fa.fa-warning.red  
           | Merge의 주체 Brach로 먼저 Checkout해야함을 주의
-        p TODO: 어떤모양이 될지 제시해줄 그림 두개 필요
+        //p TODO: 어떤모양이 될지 제시해줄 그림 두개 필요
         pre.dark
           code.language-bash.
             git branch NEW_BRANCH_NAME
@@ -824,14 +835,14 @@ html
         span.small_title.bullet= smallTitle
         h2 Checkout
         p 
-          strong.red Commit 전 
-          | 변경사항은 Checkout!
+          strong.red Commit 하지 않은 
+          | 변경사항을 되돌릴 때는 Checkout!
           br
           | 커밋을 만들지 않고 Working Directory의 일부 혹은 전체 내용이 바뀜
         h2 Revert
         p 
           strong.red Commit 후 
-          | 커밋 내용을 통째로 되돌릴때는 Revert!
+          | 커밋 내용을 통째로 되돌릴 때는 Revert!
           br
           | 되돌리는 내용을 담은 커밋을 발생시킨다.
         
@@ -844,9 +855,11 @@ html
         p 
           span.red 이용에 주의해야 함. 위험한(?) 명령어
           br
-          | File을 Reset하는 것은 Unstaged 상태로 만드는 것
+          strong File을 Reset 
+          |  : 해당 파일을 Unstaged 상태로 만드는 것
           br
-          | Commit Reset은 현재 Branch를 해당 Commit으로 이동하는 것
+          strong Commit으로 Reset 
+          |  : 현재 Branch를 해당 Commit으로 이동하는(되돌리는) 것
         pre.dark
           code.language-bash
             :markup
@@ -861,29 +874,25 @@ html
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 Checkout vs. Reset
+        | 공통점 : 특정 커밋의 상태로 Working Directory의 내용을 되돌린다.
+        br
+        br
+        br
         h3
-          i.fa.fa-check
+          i.fa.fa-check   
             :markup
               Checkout <commit>
-        p HEAD만 다른 곳으로 이동할뿐
+        p HEAD만 다른 곳으로 이동할뿐, History를 Read-only
+        br
         h3
-          i.fa.fa-undo
+          i.fa.fa-undo   
             :markup
               Reset <commit>
-        p Branch와 Head가 다른 곳으로 이동! Branch의 기록을 뒤바꾸는 일.
+        p Branch와 Head가 다른 곳으로 이동! History를 (re)Write
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet= smallTitle
         h2 기타 유용한 명령어
-        pre.dark.small_font
-          code.language-bash
-            :markup
-              git clean -f
-        p 
-          i.fa.fa-gift
-          strong  clean
-          | : Untracked File을 지움, .gitignore에 명시된 파일은 안지움
-        br
         pre.dark.small_font
           code.language-bash.
             git commit <strong>--ammend</strong> -m "You can change commit message"
@@ -900,7 +909,15 @@ html
           i.fa.fa-gift 
           strong  stash
           | : Commit 되지 않은 변경사항을 따로 저장해두고 다음에 적용할 때
-
+        br
+        pre.dark.small_font
+          code.language-bash
+            :markup
+              git clean -f
+        p 
+          i.fa.fa-gift
+          strong  clean
+          | : Untracked File을 지움, .gitignore에 명시된 파일은 안지움
       
       - smallTitle="Git 원격 저장소"
       section(data-bespoke-state='reveal',data-bespoke-hash="remote")
@@ -979,9 +996,14 @@ html
           i.fa.fa-cloud-download.fa-2x
           br
           | Fetch vs. Pull
-        p.bullet Remote에 있는 내용를 전부 가져오는 행위는 동일
+        p.bullet 
+          strong 공통점 : 
+          |  Remote에 있는 내용를 전부 가져오는 행위는 동일
+        p.bullet
+          strong 차이점 : 
+          |  가져와서 Merge 자동으로 해주는 것이 Pull 
           br
-          | Local branch랑 합치면 Pull (내 작업 Working Directory에 영향)
+          | (내 작업 Working Directory에 영향)
 
       section(data-bespoke-state='emphatic')
         span.small_title.bullet 정리실습 3
@@ -1185,11 +1207,17 @@ html
         h1 감사합니다.
         h2.white
           a(href="http://class.yostudio.kr",target="_blank").white class.yostudio.kr
+        
+        h3.white jong@yostudio.kr
         br
         h4.white
-          | 강의 후에도 강의 관련 질문 및 요청사항은 
-          a(href="http://class.yostudio.kr",target="_blank") class.yostudio.kr
-          | 에 올려주세요.
+          | 강의 후에도 강의 관련 질문은 
+          a(href="http://class.yostudio.kr",target="_blank").white.underline class.yostudio.kr
+          |  에 올려주세요.
+        h4.white.normal
+          | 본 강의자료는 
+          a(href="http://yomybaby.github.io/gitlecture/").white.underline http://yomybaby.github.io/gitlecture/
+          |  에 공개되어 있습니다.
 
       section(data-bespoke-state='emphatic', data-bespoke-hash="ref")
         span.small_title.bullet 부록 1
