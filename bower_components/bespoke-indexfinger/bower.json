@@ -1,0 +1,8 @@
+{
+    "name": "bespoke-indexfinger",
+    "version": "0.1.2",
+    "dependencies": {
+        "bespoke.js": "~0.3.1",
+        "bespoke-convenient": "~0.3.0"
+    }
+}
