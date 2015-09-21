@@ -29,6 +29,7 @@ bespoke.from('#main-article', {
   run: true,
   // jumpy: true
   backgroundElement: true
+  // secondary: true
 });
 
 
