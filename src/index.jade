@@ -27,19 +27,23 @@ html
     - var smallTitle ='';
     article#main-article
       section(data-bespoke-state='reveal')
+        // https://www.youtube.com/watch?v=4XpnKHJAok8&feature=youtu.be&t=1m30s
         //- span.small_title.txt_L
         //-   i.fa.fa-warning
         //-   |  좌우 방향키로 페이지 이동하세요.(모바일은 좌우 swipe)
         //-   br
           //- <div class="fb-like" data-href="http://yomybaby.github.io/gitlecture" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         h1
+          | Dig
+          span()  the   
           i.fa.fa-git
-          |  이해하기
-        h3 불타는 금요일 저녁에..
+        //- h3 불타는 금요일 저녁에..
           //- i.fa.fa-git
           //- |  이해와 활용
-        h5 이종은
-        h5 2015.11.06
+        h3 깃 파헤치기
+        br
+        h4 이종은
+        //- h5 2015.11.06
         br
         
 
@@ -51,6 +55,9 @@ html
           li
             i.fa-li.fa.fa-angle-right
             | 야생 개발자 & 두 아이의 아빠
+          li
+            i.fa-li.fa.fa-angle-right
+            | 오픈프론티어 2기
           li
             i.fa-li.fa.fa-angle-right
             | Web & App 개발 / 컨설팅 / 교육
@@ -1058,7 +1065,7 @@ html
           | Fetch vs. Pull
         p.bullet 
           strong 공통점 : 
-          |  Remote에 있는 내용를 전부 가져오는 행위는 동일
+          |  Remote에 있는 선택한 Branch의 내용를 전부 가져오는 행위는 동일
         p.bullet
           strong 차이점 : 
           |  가져와서 Merge 자동으로 해주는 것이 Pull 
