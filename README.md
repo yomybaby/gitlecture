@@ -16,9 +16,7 @@ $ npm install && bower install
 $ grunt server
 ```
 
-<<<<<<< HEAD
-
-## 추가할 예정인 내용
+## 기타 다룰만한 내용
 * from Pro git
 	* HEAD 파일, index 파일, objects 디렉토리, refs 디렉토리가 남았다. 이 네 항목이 Git의 핵심이다. 
 	* PackFile에서 
@@ -29,10 +27,8 @@ Git에 대해 호기심이 생긴 분이라 생각한다. 강의를 듣고 Git�
 	* 상호 조정이 없는 협력 ( This is cooperation without coordination. 	)
 	* http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government/transcript?language=ko#t-642369
 
-
-
 * git cat-file -t 00000
 * git cat-file commit 0000
-=======
+
+
 [github page](http://yomybaby.github.io/gitlecture)에서는 바로 슬라이드를 보실 수 있습니다.
->>>>>>> 0db5a5c43889190fe8974eba2f89279302e53b18
